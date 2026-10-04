@@ -6,10 +6,11 @@
 
 | Nome | Número |
 |---|---|
-| _(preencher)_ | _(preencher)_ |
-| _(preencher)_ | _(preencher)_ |
+| Luís Almoster | a22402907 |
 
-**Repositório GitHub:** _(preencher: https://github.com/UTILIZADOR/REPOSITORIO)_
+Trabalho individual.
+
+**Repositório GitHub:** https://github.com/luisrdsba/Trabalho_1_Sistemas
 
 ---
 

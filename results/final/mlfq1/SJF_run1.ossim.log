@@ -1,0 +1,227 @@
+OSSIM scheduler configured with algorithm SJF
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.248 s] CHEGADA    A_batch (pid 1652) novo processo, burst de CPU de 8000 ms -> ready queue
+[   0.248 s] DESPACHO   A_batch (burst 8000 ms): o burst mais curto de [A_batch(8000)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.351 s] CHEGADA    B_inter (pid 1654) novo processo, burst de CPU de 100 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.520 s] CHEGADA    C_inter (pid 1656) novo processo, burst de CPU de 150 ms -> ready queue
+[   8.724 s] FIM BURST  A_batch terminou o burst de CPU de 8000 ms -> DONE
+[   8.724 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100) C_inter(150)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[   8.738 s] SAIDA      A_batch (pid 1652) terminou e fechou a ligacao
+[   8.833 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   8.833 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[   8.847 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   8.991 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   9.003 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   9.250 s] FIM E/S    B_inter desbloqueado
+[   9.262 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   9.262 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[   9.358 s] FIM E/S    C_inter desbloqueado
+[   9.370 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   9.370 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   9.370 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[   9.386 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   9.530 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   9.542 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   9.787 s] FIM E/S    B_inter desbloqueado
+[   9.799 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   9.799 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[   9.892 s] FIM E/S    C_inter desbloqueado
+[   9.903 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   9.903 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   9.903 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[   9.916 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  10.065 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  10.079 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  10.334 s] FIM E/S    B_inter desbloqueado
+[  10.348 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  10.348 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  10.449 s] FIM E/S    C_inter desbloqueado
+[  10.463 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  10.463 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  10.463 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  10.482 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  10.634 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  10.648 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  10.904 s] FIM E/S    B_inter desbloqueado
+[  10.918 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  10.918 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  11.020 s] FIM E/S    C_inter desbloqueado
+[  11.034 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  11.034 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  11.034 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  11.054 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  11.201 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  11.213 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  11.464 s] FIM E/S    B_inter desbloqueado
+[  11.494 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  11.494 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  11.593 s] FIM E/S    C_inter desbloqueado
+[  11.607 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  11.607 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  11.607 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  11.629 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  11.781 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  11.795 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  12.049 s] FIM E/S    B_inter desbloqueado
+[  12.063 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  12.063 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  12.164 s] FIM E/S    C_inter desbloqueado
+[  12.178 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  12.178 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  12.178 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  12.198 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  12.349 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  12.363 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  12.617 s] FIM E/S    B_inter desbloqueado
+[  12.631 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  12.631 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  12.732 s] FIM E/S    C_inter desbloqueado
+[  12.746 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  12.746 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  12.746 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  12.767 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  12.918 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  12.931 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  13.185 s] FIM E/S    B_inter desbloqueado
+[  13.201 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  13.201 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  13.297 s] FIM E/S    C_inter desbloqueado
+[  13.372 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  13.372 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  13.372 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  13.388 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  13.533 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  13.546 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  13.797 s] FIM E/S    B_inter desbloqueado
+[  13.810 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  13.810 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  13.909 s] FIM E/S    C_inter desbloqueado
+[  13.921 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  13.921 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  13.921 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  13.939 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  14.088 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  14.102 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  14.356 s] FIM E/S    B_inter desbloqueado
+[  14.369 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  14.369 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  14.466 s] FIM E/S    C_inter desbloqueado
+[  14.480 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  14.480 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  14.480 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  14.499 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  14.648 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  14.661 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  14.916 s] FIM E/S    B_inter desbloqueado
+[  14.929 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  14.929 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  15.031 s] FIM E/S    C_inter desbloqueado
+[  15.044 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  15.044 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  15.044 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  15.063 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  15.213 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  15.226 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  15.478 s] FIM E/S    B_inter desbloqueado
+[  15.492 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  15.492 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  15.591 s] FIM E/S    C_inter desbloqueado
+[  15.604 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  15.604 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  15.604 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  15.623 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  15.773 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  15.850 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  16.103 s] FIM E/S    B_inter desbloqueado
+[  16.117 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  16.117 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  16.215 s] FIM E/S    C_inter desbloqueado
+[  16.228 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  16.228 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  16.228 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  16.242 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  16.390 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  16.404 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  16.654 s] FIM E/S    B_inter desbloqueado
+[  16.666 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  16.666 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  16.760 s] FIM E/S    C_inter desbloqueado
+[  16.772 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  16.772 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  16.772 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  16.787 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  16.936 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  16.950 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  17.206 s] FIM E/S    B_inter desbloqueado
+[  17.219 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  17.219 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  17.321 s] FIM E/S    C_inter desbloqueado
+[  17.335 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  17.335 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  17.335 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  17.355 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  17.508 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  17.521 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  17.776 s] FIM E/S    B_inter desbloqueado
+[  17.790 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  17.790 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  17.891 s] FIM E/S    C_inter desbloqueado
+[  17.905 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  17.905 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  17.905 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  17.926 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  18.078 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  18.091 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  18.348 s] FIM E/S    B_inter desbloqueado
+[  18.362 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  18.362 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  18.463 s] FIM E/S    C_inter desbloqueado
+[  18.477 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  18.477 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  18.477 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  18.498 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  18.648 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  18.661 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  18.917 s] FIM E/S    B_inter desbloqueado
+[  18.932 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  18.932 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  19.033 s] FIM E/S    C_inter desbloqueado
+[  19.047 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  19.047 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  19.047 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  19.067 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  19.215 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  19.231 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  19.477 s] FIM E/S    B_inter desbloqueado
+[  19.489 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  19.489 s] DESPACHO   B_inter (burst 100 ms): o burst mais curto de [B_inter(100)]
+[  19.586 s] FIM E/S    C_inter desbloqueado
+[  19.601 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  19.601 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  19.601 s] DESPACHO   C_inter (burst 150 ms): o burst mais curto de [C_inter(150)]
+[  19.622 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  19.771 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  19.785 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  20.039 s] FIM E/S    B_inter desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  20.055 s] SAIDA      B_inter (pid 1654) terminou e fechou a ligacao
+[  20.160 s] FIM E/S    C_inter desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  20.173 s] SAIDA      C_inter (pid 1656) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (SJF) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A_batch | 1652 | 0.248 | 0.248 | 8.724 | 0.000 | 0.000 | 8.476 | 8.000 | 0.000 |
+| B_inter | 1654 | 0.351 | 8.724 | 20.039 | 8.373 | 0.419 | 19.688 | 2.000 | 8.000 |
+| C_inter | 1656 | 0.520 | 8.833 | 20.160 | 8.313 | 0.416 | 19.640 | 3.000 | 7.000 |
+| **Media** | | | | | 5.562 | 0.278 | 15.935 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

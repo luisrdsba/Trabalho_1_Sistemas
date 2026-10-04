@@ -1,0 +1,257 @@
+OSSIM scheduler configured with algorithm RR
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.239 s] CHEGADA    A_batch (pid 1673) novo processo, burst de CPU de 8000 ms -> ready queue
+[   0.239 s] DESPACHO   A_batch (faltam 8000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(8000)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.341 s] CHEGADA    B_inter (pid 1675) novo processo, burst de CPU de 100 ms -> ready queue
+[   0.341 s] CHEGADA    C_inter (pid 1677) novo processo, burst de CPU de 150 ms -> ready queue
+[   0.953 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 7500 ms) -> fim da ready queue
+[   0.953 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(7500)]
+[   1.062 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   1.062 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(7500)]
+[   1.078 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   1.228 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   1.228 s] DESPACHO   A_batch (faltam 7500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(7500)]
+[   1.244 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   1.499 s] FIM E/S    B_inter desbloqueado
+[   1.512 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   1.611 s] FIM E/S    C_inter desbloqueado
+[   1.626 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   1.773 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 7000 ms) -> fim da ready queue
+[   1.773 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(7000)]
+[   1.907 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   1.907 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(7000)]
+[   1.922 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   2.071 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   2.071 s] DESPACHO   A_batch (faltam 7000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(7000)]
+[   2.090 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   2.347 s] FIM E/S    B_inter desbloqueado
+[   2.466 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   2.565 s] FIM E/S    C_inter desbloqueado
+[   2.578 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   2.728 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 6500 ms) -> fim da ready queue
+[   2.728 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(6500)]
+[   2.837 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   2.837 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(6500)]
+[   2.853 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   3.003 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   3.003 s] DESPACHO   A_batch (faltam 6500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(6500)]
+[   3.020 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   3.277 s] FIM E/S    B_inter desbloqueado
+[   3.290 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   3.389 s] FIM E/S    C_inter desbloqueado
+[   3.403 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   3.553 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 6000 ms) -> fim da ready queue
+[   3.553 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(6000)]
+[   3.665 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   3.665 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(6000)]
+[   3.682 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   3.833 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   3.833 s] DESPACHO   A_batch (faltam 6000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(6000)]
+[   3.851 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   4.109 s] FIM E/S    B_inter desbloqueado
+[   4.122 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   4.221 s] FIM E/S    C_inter desbloqueado
+[   4.234 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   4.385 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 5500 ms) -> fim da ready queue
+[   4.385 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(5500)]
+[   4.496 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   4.496 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(5500)]
+[   4.513 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   4.664 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   4.664 s] DESPACHO   A_batch (faltam 5500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(5500)]
+[   4.681 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   4.940 s] FIM E/S    B_inter desbloqueado
+[   4.954 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   5.051 s] FIM E/S    C_inter desbloqueado
+[   5.065 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   5.216 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 5000 ms) -> fim da ready queue
+[   5.216 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(5000)]
+[   5.355 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   5.355 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(5000)]
+[   5.371 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   5.524 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   5.524 s] DESPACHO   A_batch (faltam 5000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(5000)]
+[   5.541 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   5.798 s] FIM E/S    B_inter desbloqueado
+[   5.812 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   5.909 s] FIM E/S    C_inter desbloqueado
+[   5.922 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   6.069 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 4500 ms) -> fim da ready queue
+[   6.069 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(4500)]
+[   6.174 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   6.174 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(4500)]
+[   6.187 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   6.337 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   6.337 s] DESPACHO   A_batch (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(4500)]
+[   6.408 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   6.664 s] FIM E/S    B_inter desbloqueado
+[   6.677 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   6.775 s] FIM E/S    C_inter desbloqueado
+[   6.789 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   6.938 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[   6.938 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(4000)]
+[   7.049 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   7.049 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(4000)]
+[   7.065 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   7.216 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   7.216 s] DESPACHO   A_batch (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(4000)]
+[   7.232 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   7.490 s] FIM E/S    B_inter desbloqueado
+[   7.505 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   7.599 s] FIM E/S    C_inter desbloqueado
+[   7.611 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   7.758 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   7.758 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(3500)]
+[   7.998 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   7.998 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(3500)]
+[   8.012 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   8.159 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   8.159 s] DESPACHO   A_batch (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(3500)]
+[   8.175 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   8.434 s] FIM E/S    B_inter desbloqueado
+[   8.448 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   8.547 s] FIM E/S    C_inter desbloqueado
+[   8.561 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   8.710 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[   8.710 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(3000)]
+[   8.815 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   8.815 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(3000)]
+[   8.827 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   8.976 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   8.976 s] DESPACHO   A_batch (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(3000)]
+[   8.993 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   9.248 s] FIM E/S    B_inter desbloqueado
+[   9.261 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   9.359 s] FIM E/S    C_inter desbloqueado
+[   9.374 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   9.525 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[   9.525 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(2500)]
+[   9.637 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[   9.637 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(2500)]
+[   9.653 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   9.803 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[   9.803 s] DESPACHO   A_batch (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(2500)]
+[   9.819 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  10.078 s] FIM E/S    B_inter desbloqueado
+[  10.092 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  10.190 s] FIM E/S    C_inter desbloqueado
+[  10.203 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  10.354 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  10.354 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(2000)]
+[  10.628 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  10.628 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(2000)]
+[  10.679 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  10.845 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  10.845 s] DESPACHO   A_batch (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(2000)]
+[  10.862 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  11.118 s] FIM E/S    B_inter desbloqueado
+[  11.132 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  11.230 s] FIM E/S    C_inter desbloqueado
+[  11.244 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  11.396 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  11.396 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(1500)]
+[  11.508 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  11.508 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(1500)]
+[  11.525 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  11.678 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  11.678 s] DESPACHO   A_batch (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(1500)]
+[  11.694 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  11.953 s] FIM E/S    B_inter desbloqueado
+[  12.004 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  12.103 s] FIM E/S    C_inter desbloqueado
+[  12.117 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  12.269 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  12.269 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(1000)]
+[  12.378 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  12.378 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(1000)]
+[  12.391 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  12.542 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  12.542 s] DESPACHO   A_batch (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(1000)]
+[  12.559 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  12.817 s] FIM E/S    B_inter desbloqueado
+[  12.831 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  12.929 s] FIM E/S    C_inter desbloqueado
+[  12.943 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  13.094 s] PREEMPCAO  A_batch esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  13.094 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150) A_batch(500)]
+[  13.205 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  13.205 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150) A_batch(500)]
+[  13.382 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  13.531 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  13.531 s] DESPACHO   A_batch (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [A_batch(500)]
+[  13.548 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  13.805 s] FIM E/S    B_inter desbloqueado
+[  13.819 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  13.918 s] FIM E/S    C_inter desbloqueado
+[  13.932 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  14.082 s] FIM BURST  A_batch terminou o burst de CPU de 8000 ms -> DONE
+[  14.082 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100) C_inter(150)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[  14.098 s] SAIDA      A_batch (pid 1673) terminou e fechou a ligacao
+[  14.199 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  14.199 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150)]
+[  14.214 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  14.366 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  14.380 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  14.638 s] FIM E/S    B_inter desbloqueado
+[  14.652 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  14.652 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100)]
+[  14.754 s] FIM E/S    C_inter desbloqueado
+[  14.767 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  14.767 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  14.767 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150)]
+[  14.787 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  14.938 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  14.952 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  15.209 s] FIM E/S    B_inter desbloqueado
+[  15.223 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  15.223 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100)]
+[  15.325 s] FIM E/S    C_inter desbloqueado
+[  15.339 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  15.339 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  15.339 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150)]
+[  15.358 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  15.511 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  15.525 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  15.782 s] FIM E/S    B_inter desbloqueado
+[  15.796 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  15.796 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100)]
+[  15.897 s] FIM E/S    C_inter desbloqueado
+[  15.911 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  15.911 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  15.911 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150)]
+[  15.933 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  16.080 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  16.092 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  16.344 s] FIM E/S    B_inter desbloqueado
+[  16.358 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  16.358 s] DESPACHO   B_inter (faltam 100 ms, time-slice 500 ms): o primeiro da ready queue [B_inter(100)]
+[  16.459 s] FIM E/S    C_inter desbloqueado
+[  16.473 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  16.473 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE
+[  16.473 s] DESPACHO   C_inter (faltam 150 ms, time-slice 500 ms): o primeiro da ready queue [C_inter(150)]
+[  16.493 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  16.645 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE
+[  16.658 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  16.916 s] FIM E/S    B_inter desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  16.930 s] SAIDA      B_inter (pid 1675) terminou e fechou a ligacao
+[  17.031 s] FIM E/S    C_inter desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  17.046 s] SAIDA      C_inter (pid 1677) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (RR) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A_batch | 1673 | 0.239 | 0.239 | 14.082 | 0.000 | 0.000 | 13.843 | 8.000 | 0.000 |
+| B_inter | 1675 | 0.341 | 0.953 | 16.916 | 0.612 | 0.227 | 16.575 | 2.000 | 8.000 |
+| C_inter | 1677 | 0.341 | 1.062 | 17.031 | 0.721 | 0.248 | 16.690 | 3.000 | 7.000 |
+| **Media** | | | | | 0.444 | 0.158 | 15.703 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

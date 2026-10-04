@@ -1,0 +1,15 @@
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 721) sent RUN request for 10000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 721) at time 174 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 723) sent RUN request for 15000 ms
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 725) sent RUN request for 20000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 723) at time 280 ms
+
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 725) at time 413 ms
+
+Enqueued burst: time=10000 ms, block=0 ms, nice=0, pages=[]
+Application A (PID 721) finished at time 10752 ms, Elapsed: 10.578 seconds, CPU: 10.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=15000 ms, block=0 ms, nice=0, pages=[]
+Application B (PID 723) finished at time 26457 ms, Elapsed: 26.177 seconds, CPU: 15.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=20000 ms, block=0 ms, nice=0, pages=[]
+Application C (PID 725) finished at time 47517 ms, Elapsed: 47.104 seconds, CPU: 20.000 seconds, BLOCKED: 0.000 seconds

@@ -1,0 +1,514 @@
+OSSIM scheduler configured with algorithm MLFQ
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.196 s] CHEGADA    A_misto (pid 1780) novo processo, burst de CPU de 5000 ms -> ready queue
+[   0.196 s] MLFQ       A_misto entra na fila do nivel 0
+[   0.196 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 5000 ms do burst) | N0:[A_misto(5000)] N1:[] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.313 s] CHEGADA    B_inter (pid 1782) novo processo, burst de CPU de 100 ms -> ready queue
+[   0.313 s] MLFQ       B_inter entra na fila do nivel 0
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.426 s] CHEGADA    C_inter (pid 1784) novo processo, burst de CPU de 150 ms -> ready queue
+[   0.426 s] MLFQ       C_inter entra na fila do nivel 0
+[   0.809 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 0 (500 ms), faltam 4500 ms -> desce para o nivel 1
+[   0.809 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100) C_inter(150)] N1:[A_misto(4500)] N2:[]
+[   0.912 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   0.912 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(4500)] N2:[]
+[   0.925 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   1.075 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   1.075 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 4500 ms do burst) | N0:[] N1:[A_misto(4500)] N2:[]
+[   1.092 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   1.348 s] FIM E/S    B_inter desbloqueado
+[   1.362 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   1.362 s] MLFQ       B_inter entra na fila do nivel 0
+[   1.362 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 260 de 1000 ms do time-slice)
+[   1.362 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(4240)] N2:[]
+[   1.470 s] FIM E/S    C_inter desbloqueado
+[   1.488 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   1.488 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   1.488 s] MLFQ       C_inter entra na fila do nivel 0
+[   1.488 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(4240)] N2:[]
+[   1.510 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   1.661 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   1.661 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 740 ms dele; faltam 4240 ms do burst) | N0:[] N1:[A_misto(4240)] N2:[]
+[   1.678 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   1.935 s] FIM E/S    B_inter desbloqueado
+[   1.949 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   1.949 s] MLFQ       B_inter entra na fila do nivel 0
+[   1.949 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 520 de 1000 ms do time-slice)
+[   1.949 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(3980)] N2:[]
+[   2.056 s] FIM E/S    C_inter desbloqueado
+[   2.069 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   2.069 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   2.069 s] MLFQ       C_inter entra na fila do nivel 0
+[   2.069 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(3980)] N2:[]
+[   2.090 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   2.241 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   2.241 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 480 ms dele; faltam 3980 ms do burst) | N0:[] N1:[A_misto(3980)] N2:[]
+[   2.257 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   2.512 s] FIM E/S    B_inter desbloqueado
+[   2.527 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   2.527 s] MLFQ       B_inter entra na fila do nivel 0
+[   2.527 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 780 de 1000 ms do time-slice)
+[   2.527 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(3720)] N2:[]
+[   2.634 s] FIM E/S    C_inter desbloqueado
+[   2.649 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   2.649 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   2.649 s] MLFQ       C_inter entra na fila do nivel 0
+[   2.649 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(3720)] N2:[]
+[   2.671 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   2.821 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   2.821 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 220 ms dele; faltam 3720 ms do burst) | N0:[] N1:[A_misto(3720)] N2:[]
+[   2.835 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   3.060 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 1 (1000 ms), faltam 3500 ms -> desce para o nivel 2
+[   3.060 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 3500 ms do burst) | N0:[] N1:[] N2:[A_misto(3500)]
+[   3.099 s] FIM E/S    B_inter desbloqueado
+[   3.113 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   3.113 s] MLFQ       B_inter entra na fila do nivel 0
+[   3.113 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 40 de 2000 ms do time-slice)
+[   3.113 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(3460)]
+[   3.221 s] FIM E/S    C_inter desbloqueado
+[   3.235 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   3.235 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   3.235 s] MLFQ       C_inter entra na fila do nivel 0
+[   3.235 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(3460)]
+[   3.257 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   3.413 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   3.413 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 1960 ms dele; faltam 3460 ms do burst) | N0:[] N1:[] N2:[A_misto(3460)]
+[   3.426 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   3.673 s] FIM E/S    B_inter desbloqueado
+[   3.687 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   3.687 s] MLFQ       B_inter entra na fila do nivel 0
+[   3.687 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 300 de 2000 ms do time-slice)
+[   3.687 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(3200)]
+[   3.794 s] FIM E/S    C_inter desbloqueado
+[   3.806 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   3.806 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   3.806 s] MLFQ       C_inter entra na fila do nivel 0
+[   3.806 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(3200)]
+[   3.823 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   3.973 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   3.973 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 1700 ms dele; faltam 3200 ms do burst) | N0:[] N1:[] N2:[A_misto(3200)]
+[   3.986 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   4.243 s] FIM E/S    B_inter desbloqueado
+[   4.375 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   4.375 s] MLFQ       B_inter entra na fila do nivel 0
+[   4.375 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 560 de 2000 ms do time-slice)
+[   4.375 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(2940)]
+[   4.482 s] FIM E/S    C_inter desbloqueado
+[   4.496 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   4.496 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   4.496 s] MLFQ       C_inter entra na fila do nivel 0
+[   4.496 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(2940)]
+[   4.519 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   4.670 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   4.670 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 1440 ms dele; faltam 2940 ms do burst) | N0:[] N1:[] N2:[A_misto(2940)]
+[   4.687 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   4.945 s] FIM E/S    B_inter desbloqueado
+[   4.958 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   4.958 s] MLFQ       B_inter entra na fila do nivel 0
+[   4.958 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 820 de 2000 ms do time-slice)
+[   4.958 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(2680)]
+[   5.000 s] BOOST      todos os processos voltam ao nivel 0 (CPU: B_inter) | N0:[A_misto(2680)] N1:[] N2:[]
+[   5.066 s] FIM E/S    C_inter desbloqueado
+[   5.082 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   5.082 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   5.082 s] MLFQ       C_inter entra na fila do nivel 0
+[   5.082 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 2680 ms do burst) | N0:[A_misto(2680) C_inter(150)] N1:[] N2:[]
+[   5.102 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   5.503 s] FIM E/S    B_inter desbloqueado
+[   5.515 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   5.515 s] MLFQ       B_inter entra na fila do nivel 0
+[   5.612 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 0 (500 ms), faltam 2180 ms -> desce para o nivel 1
+[   5.612 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150) B_inter(100)] N1:[A_misto(2180)] N2:[]
+[   5.777 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   5.777 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(2180)] N2:[]
+[   5.794 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   5.893 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   5.893 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 2180 ms do burst) | N0:[] N1:[A_misto(2180)] N2:[]
+[   5.909 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   6.164 s] FIM E/S    C_inter desbloqueado
+[   6.179 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   6.179 s] MLFQ       C_inter entra na fila do nivel 0
+[   6.179 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 260 de 1000 ms do time-slice)
+[   6.179 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(1920)] N2:[]
+[   6.338 s] FIM E/S    B_inter desbloqueado
+[   6.352 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   6.352 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   6.352 s] MLFQ       B_inter entra na fila do nivel 0
+[   6.352 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(1920)] N2:[]
+[   6.376 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   6.474 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   6.474 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 740 ms dele; faltam 1920 ms do burst) | N0:[] N1:[A_misto(1920)] N2:[]
+[   6.491 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   6.749 s] FIM E/S    C_inter desbloqueado
+[   6.763 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   6.763 s] MLFQ       C_inter entra na fila do nivel 0
+[   6.763 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 520 de 1000 ms do time-slice)
+[   6.763 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(1660)] N2:[]
+[   6.925 s] FIM E/S    B_inter desbloqueado
+[   7.102 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   7.102 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   7.102 s] MLFQ       B_inter entra na fila do nivel 0
+[   7.102 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(1660)] N2:[]
+[   7.123 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   7.223 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   7.223 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 480 ms dele; faltam 1660 ms do burst) | N0:[] N1:[A_misto(1660)] N2:[]
+[   7.239 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   7.497 s] FIM E/S    C_inter desbloqueado
+[   7.511 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   7.511 s] MLFQ       C_inter entra na fila do nivel 0
+[   7.511 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 780 de 1000 ms do time-slice)
+[   7.511 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(1400)] N2:[]
+[   7.671 s] FIM E/S    B_inter desbloqueado
+[   7.685 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   7.685 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   7.685 s] MLFQ       B_inter entra na fila do nivel 0
+[   7.685 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(1400)] N2:[]
+[   7.707 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   7.806 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   7.806 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 220 ms dele; faltam 1400 ms do burst) | N0:[] N1:[A_misto(1400)] N2:[]
+[   7.823 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   8.048 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 1 (1000 ms), faltam 1180 ms -> desce para o nivel 2
+[   8.048 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 1180 ms do burst) | N0:[] N1:[] N2:[A_misto(1180)]
+[   8.085 s] FIM E/S    C_inter desbloqueado
+[   8.099 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   8.099 s] MLFQ       C_inter entra na fila do nivel 0
+[   8.099 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 40 de 2000 ms do time-slice)
+[   8.099 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(1140)]
+[   8.258 s] FIM E/S    B_inter desbloqueado
+[   8.272 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   8.272 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   8.272 s] MLFQ       B_inter entra na fila do nivel 0
+[   8.272 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(1140)]
+[   8.296 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   8.563 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   8.563 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 1960 ms dele; faltam 1140 ms do burst) | N0:[] N1:[] N2:[A_misto(1140)]
+[   8.580 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   8.835 s] FIM E/S    C_inter desbloqueado
+[   8.848 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   8.848 s] MLFQ       C_inter entra na fila do nivel 0
+[   8.848 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 300 de 2000 ms do time-slice)
+[   8.848 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(880)]
+[   9.002 s] FIM E/S    B_inter desbloqueado
+[   9.016 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   9.016 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   9.016 s] MLFQ       B_inter entra na fila do nivel 0
+[   9.016 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(880)]
+[   9.037 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   9.135 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   9.135 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 1700 ms dele; faltam 880 ms do burst) | N0:[] N1:[] N2:[A_misto(880)]
+[   9.152 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   9.401 s] FIM E/S    C_inter desbloqueado
+[   9.413 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   9.413 s] MLFQ       C_inter entra na fila do nivel 0
+[   9.413 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 560 de 2000 ms do time-slice)
+[   9.413 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(620)]
+[   9.561 s] FIM E/S    B_inter desbloqueado
+[   9.573 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[   9.573 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[   9.573 s] MLFQ       B_inter entra na fila do nivel 0
+[   9.573 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[A_misto(620)]
+[   9.588 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[   9.685 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[   9.685 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 1440 ms dele; faltam 620 ms do burst) | N0:[] N1:[] N2:[A_misto(620)]
+[   9.698 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[   9.945 s] FIM E/S    C_inter desbloqueado
+[   9.957 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[   9.957 s] MLFQ       C_inter entra na fila do nivel 0
+[   9.957 s] PREEMPCAO  A_misto (nivel 2) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 2 (ja gastou 820 de 2000 ms do time-slice)
+[   9.957 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[A_misto(360)]
+[  10.003 s] BOOST      todos os processos voltam ao nivel 0 (CPU: C_inter) | N0:[A_misto(360)] N1:[] N2:[]
+[  10.107 s] FIM E/S    B_inter desbloqueado
+[  10.119 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  10.119 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  10.119 s] MLFQ       B_inter entra na fila do nivel 0
+[  10.119 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 360 ms do burst) | N0:[A_misto(360) B_inter(100)] N1:[] N2:[]
+[  10.134 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  10.493 s] FIM E/S    C_inter desbloqueado
+[  10.506 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  10.506 s] FIM BURST  A_misto terminou o burst de CPU de 5000 ms -> DONE (mantem o nivel 0)
+[  10.506 s] MLFQ       C_inter entra na fila do nivel 0
+[  10.506 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100) C_inter(150)] N1:[] N2:[]
+[  10.527 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  10.527 s] MLFQ       A_misto entra na fila do nivel 0
+[  10.628 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  10.628 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150) A_misto(100)] N1:[] N2:[]
+[  10.644 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  10.792 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  10.792 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  10.803 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  10.896 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  10.907 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  11.054 s] FIM E/S    B_inter desbloqueado
+[  11.187 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  11.187 s] MLFQ       B_inter entra na fila do nivel 0
+[  11.187 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  11.288 s] FIM E/S    C_inter desbloqueado
+[  11.301 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  11.301 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  11.301 s] MLFQ       C_inter entra na fila do nivel 0
+[  11.301 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  11.317 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  11.452 s] FIM E/S    A_misto desbloqueado
+[  11.463 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  11.463 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  11.463 s] MLFQ       A_misto entra na fila do nivel 0
+[  11.463 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  11.478 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  11.571 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  11.674 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  11.819 s] FIM E/S    B_inter desbloqueado
+[  11.831 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  11.831 s] MLFQ       B_inter entra na fila do nivel 0
+[  11.831 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  11.927 s] FIM E/S    C_inter desbloqueado
+[  11.939 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  11.939 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  11.939 s] MLFQ       C_inter entra na fila do nivel 0
+[  11.939 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  11.955 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  12.089 s] FIM E/S    A_misto desbloqueado
+[  12.101 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  12.101 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  12.101 s] MLFQ       A_misto entra na fila do nivel 0
+[  12.101 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  12.117 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  12.213 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  12.227 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  12.371 s] FIM E/S    B_inter desbloqueado
+[  12.382 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  12.382 s] MLFQ       B_inter entra na fila do nivel 0
+[  12.382 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  12.481 s] FIM E/S    C_inter desbloqueado
+[  12.493 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  12.493 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  12.493 s] MLFQ       C_inter entra na fila do nivel 0
+[  12.493 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  12.508 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  12.642 s] FIM E/S    A_misto desbloqueado
+[  12.654 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  12.654 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  12.654 s] MLFQ       A_misto entra na fila do nivel 0
+[  12.654 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  12.671 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  12.764 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  12.775 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  12.919 s] FIM E/S    B_inter desbloqueado
+[  12.930 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  12.930 s] MLFQ       B_inter entra na fila do nivel 0
+[  12.930 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  13.024 s] FIM E/S    C_inter desbloqueado
+[  13.035 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  13.035 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  13.035 s] MLFQ       C_inter entra na fila do nivel 0
+[  13.035 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  13.048 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  13.186 s] FIM E/S    A_misto desbloqueado
+[  13.198 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  13.198 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  13.198 s] MLFQ       A_misto entra na fila do nivel 0
+[  13.198 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  13.212 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  13.305 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  13.317 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  13.461 s] FIM E/S    B_inter desbloqueado
+[  13.472 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  13.472 s] MLFQ       B_inter entra na fila do nivel 0
+[  13.472 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  13.566 s] FIM E/S    C_inter desbloqueado
+[  13.578 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  13.578 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  13.578 s] MLFQ       C_inter entra na fila do nivel 0
+[  13.578 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  13.593 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  13.728 s] FIM E/S    A_misto desbloqueado
+[  13.741 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  13.741 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  13.741 s] MLFQ       A_misto entra na fila do nivel 0
+[  13.741 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  13.758 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  13.854 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  13.868 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  14.018 s] FIM E/S    B_inter desbloqueado
+[  14.031 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  14.031 s] MLFQ       B_inter entra na fila do nivel 0
+[  14.031 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  14.135 s] FIM E/S    C_inter desbloqueado
+[  14.148 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  14.148 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  14.148 s] MLFQ       C_inter entra na fila do nivel 0
+[  14.148 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  14.169 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  14.309 s] FIM E/S    A_misto desbloqueado
+[  14.323 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  14.323 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  14.323 s] MLFQ       A_misto entra na fila do nivel 0
+[  14.323 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  14.345 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  14.441 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  14.454 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  14.607 s] FIM E/S    B_inter desbloqueado
+[  14.621 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  14.621 s] MLFQ       B_inter entra na fila do nivel 0
+[  14.621 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  14.725 s] FIM E/S    C_inter desbloqueado
+[  14.739 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  14.739 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  14.739 s] MLFQ       C_inter entra na fila do nivel 0
+[  14.739 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  14.761 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  14.901 s] FIM E/S    A_misto desbloqueado
+[  14.915 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  14.915 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  14.915 s] MLFQ       A_misto entra na fila do nivel 0
+[  14.915 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  14.938 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  15.005 s] BOOST      todos os processos voltam ao nivel 0 (CPU: A_misto) | N0:[] N1:[] N2:[]
+[  15.039 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  15.053 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  15.205 s] FIM E/S    B_inter desbloqueado
+[  15.218 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  15.218 s] MLFQ       B_inter entra na fila do nivel 0
+[  15.218 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  15.321 s] FIM E/S    C_inter desbloqueado
+[  15.335 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  15.335 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  15.335 s] MLFQ       C_inter entra na fila do nivel 0
+[  15.335 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  15.358 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  15.499 s] FIM E/S    A_misto desbloqueado
+[  15.513 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  15.513 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  15.513 s] MLFQ       A_misto entra na fila do nivel 0
+[  15.513 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  15.534 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  15.633 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  15.647 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  15.799 s] FIM E/S    B_inter desbloqueado
+[  15.813 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  15.813 s] MLFQ       B_inter entra na fila do nivel 0
+[  15.813 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  15.917 s] FIM E/S    C_inter desbloqueado
+[  15.931 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  15.931 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  15.931 s] MLFQ       C_inter entra na fila do nivel 0
+[  15.931 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  15.952 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  16.092 s] FIM E/S    A_misto desbloqueado
+[  16.105 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  16.105 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  16.105 s] MLFQ       A_misto entra na fila do nivel 0
+[  16.105 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  16.129 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  16.228 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  16.242 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  16.396 s] FIM E/S    B_inter desbloqueado
+[  16.411 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  16.411 s] MLFQ       B_inter entra na fila do nivel 0
+[  16.411 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  16.513 s] FIM E/S    C_inter desbloqueado
+[  16.527 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  16.527 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  16.527 s] MLFQ       C_inter entra na fila do nivel 0
+[  16.527 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  16.549 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  16.691 s] FIM E/S    A_misto desbloqueado
+[  16.705 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  16.705 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  16.705 s] MLFQ       A_misto entra na fila do nivel 0
+[  16.705 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  16.728 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  16.825 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  16.839 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  16.991 s] FIM E/S    B_inter desbloqueado
+[  17.004 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  17.004 s] MLFQ       B_inter entra na fila do nivel 0
+[  17.004 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  17.106 s] FIM E/S    C_inter desbloqueado
+[  17.118 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  17.118 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  17.118 s] MLFQ       C_inter entra na fila do nivel 0
+[  17.118 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  17.134 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  17.269 s] FIM E/S    A_misto desbloqueado
+[  17.281 s] PEDIDO RUN A_misto pede novo burst de CPU de 100 ms -> ready queue
+[  17.281 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  17.281 s] MLFQ       A_misto entra na fila do nivel 0
+[  17.281 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[A_misto(100)] N1:[] N2:[]
+[  17.296 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  17.390 s] FIM BURST  A_misto terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  17.402 s] BLOQUEIO   A_misto fica bloqueado 400 ms (E/S)
+[  17.547 s] FIM E/S    B_inter desbloqueado
+[  17.560 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  17.560 s] MLFQ       B_inter entra na fila do nivel 0
+[  17.560 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[] N2:[]
+[  17.656 s] FIM E/S    C_inter desbloqueado
+[  17.668 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  17.668 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  17.668 s] MLFQ       C_inter entra na fila do nivel 0
+[  17.668 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[] N2:[]
+[  17.684 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  17.819 s] FIM E/S    A_misto desbloqueado
+[  17.836 s] PEDIDO RUN A_misto pede novo burst de CPU de 5000 ms -> ready queue
+[  17.836 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  17.836 s] MLFQ       A_misto entra na fila do nivel 0
+[  17.836 s] DESPACHO   A_misto do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 5000 ms do burst) | N0:[A_misto(5000)] N1:[] N2:[]
+[  17.853 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  18.105 s] FIM E/S    B_inter desbloqueado
+[  18.119 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  18.119 s] MLFQ       B_inter entra na fila do nivel 0
+[  18.220 s] FIM E/S    C_inter desbloqueado
+[  18.234 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  18.234 s] MLFQ       C_inter entra na fila do nivel 0
+[  18.384 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 0 (500 ms), faltam 4500 ms -> desce para o nivel 1
+[  18.384 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100) C_inter(150)] N1:[A_misto(4500)] N2:[]
+[  18.491 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  18.491 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(4500)] N2:[]
+[  18.507 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  18.657 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  18.657 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 4500 ms do burst) | N0:[] N1:[A_misto(4500)] N2:[]
+[  18.673 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  18.930 s] FIM E/S    B_inter desbloqueado
+[  18.944 s] PEDIDO RUN B_inter pede novo burst de CPU de 100 ms -> ready queue
+[  18.944 s] MLFQ       B_inter entra na fila do nivel 0
+[  18.944 s] PREEMPCAO  A_misto (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 260 de 1000 ms do time-slice)
+[  18.944 s] DESPACHO   B_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 100 ms do burst) | N0:[B_inter(100)] N1:[A_misto(4240)] N2:[]
+[  19.052 s] FIM E/S    C_inter desbloqueado
+[  19.066 s] PEDIDO RUN C_inter pede novo burst de CPU de 150 ms -> ready queue
+[  19.066 s] FIM BURST  B_inter terminou o burst de CPU de 100 ms -> DONE (mantem o nivel 0)
+[  19.066 s] MLFQ       C_inter entra na fila do nivel 0
+[  19.066 s] DESPACHO   C_inter do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 150 ms do burst) | N0:[C_inter(150)] N1:[A_misto(4240)] N2:[]
+[  19.092 s] BLOQUEIO   B_inter fica bloqueado 400 ms (E/S)
+[  19.242 s] FIM BURST  C_inter terminou o burst de CPU de 150 ms -> DONE (mantem o nivel 0)
+[  19.242 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 740 ms dele; faltam 4240 ms do burst) | N0:[] N1:[A_misto(4240)] N2:[]
+[  19.259 s] BLOQUEIO   C_inter fica bloqueado 350 ms (E/S)
+[  19.513 s] FIM E/S    B_inter desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  19.527 s] SAIDA      B_inter (pid 1782) terminou e fechou a ligacao
+[  19.628 s] FIM E/S    C_inter desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  19.642 s] SAIDA      C_inter (pid 1784) terminou e fechou a ligacao
+[  20.007 s] BOOST      todos os processos voltam ao nivel 0 (CPU: A_misto) | N0:[] N1:[] N2:[]
+[  20.536 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 0 (500 ms), faltam 3030 ms -> desce para o nivel 1
+[  20.536 s] DESPACHO   A_misto do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 3030 ms do burst) | N0:[] N1:[A_misto(3030)] N2:[]
+[  21.591 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 1 (1000 ms), faltam 2030 ms -> desce para o nivel 2
+[  21.591 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 2030 ms do burst) | N0:[] N1:[] N2:[A_misto(2030)]
+[  23.709 s] PREEMPCAO  A_misto gastou o time-slice todo do nivel 2 (2000 ms), faltam 30 ms -> fim da fila do nivel 2 (ultimo nivel)
+[  23.709 s] DESPACHO   A_misto do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 30 ms do burst) | N0:[] N1:[] N2:[A_misto(30)]
+[  23.747 s] FIM BURST  A_misto terminou o burst de CPU de 5000 ms -> DONE (mantem o nivel 2)
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[  23.760 s] SAIDA      A_misto (pid 1780) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (MLFQ) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A_misto | 1780 | 0.196 | 0.196 | 23.747 | 0.000 | 0.019 | 23.551 | 11.200 | 4.800 |
+| B_inter | 1782 | 0.313 | 0.809 | 19.513 | 0.496 | 0.047 | 19.200 | 3.000 | 12.000 |
+| C_inter | 1784 | 0.426 | 0.912 | 19.628 | 0.486 | 0.046 | 19.202 | 4.500 | 10.500 |
+| **Media** | | | | | 0.327 | 0.037 | 20.651 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

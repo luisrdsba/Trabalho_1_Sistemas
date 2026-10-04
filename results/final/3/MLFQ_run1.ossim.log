@@ -1,0 +1,126 @@
+OSSIM scheduler configured with algorithm MLFQ
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.239 s] CHEGADA    A (pid 1316) novo processo, burst de CPU de 300 ms -> ready queue
+[   0.239 s] MLFQ       A entra na fila do nivel 0
+[   0.239 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 300 ms do burst) | N0:[A(300)] N1:[] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.341 s] CHEGADA    B (pid 1318) novo processo, burst de CPU de 4000 ms -> ready queue
+[   0.341 s] CHEGADA    C (pid 1320) novo processo, burst de CPU de 1500 ms -> ready queue
+[   0.341 s] MLFQ       B entra na fila do nivel 0
+[   0.341 s] MLFQ       C entra na fila do nivel 0
+[   0.697 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE (mantem o nivel 0)
+[   0.697 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 4000 ms do burst) | N0:[B(4000) C(1500)] N1:[] N2:[]
+[   0.712 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   1.231 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 3500 ms -> desce para o nivel 1
+[   1.231 s] DESPACHO   C do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 1500 ms do burst) | N0:[C(1500)] N1:[B(3500)] N2:[]
+[   1.557 s] FIM E/S    A desbloqueado
+[   1.570 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   1.570 s] MLFQ       A entra na fila do nivel 0
+[   1.776 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 1000 ms -> desce para o nivel 1
+[   1.776 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 300 ms do burst) | N0:[A(300)] N1:[B(3500) C(1000)] N2:[]
+[   2.092 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE (mantem o nivel 0)
+[   2.092 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 3500 ms do burst) | N0:[] N1:[B(3500) C(1000)] N2:[]
+[   2.108 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   2.949 s] FIM E/S    A desbloqueado
+[   2.963 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   2.963 s] MLFQ       A entra na fila do nivel 0
+[   2.963 s] PREEMPCAO  B (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 810 de 1000 ms do time-slice)
+[   2.963 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 300 ms do burst) | N0:[A(300)] N1:[C(1000) B(2690)] N2:[]
+[   3.292 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE (mantem o nivel 0)
+[   3.292 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1000 ms do burst) | N0:[] N1:[C(1000) B(2690)] N2:[]
+[   3.308 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   4.148 s] FIM E/S    A desbloqueado
+[   4.162 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   4.162 s] MLFQ       A entra na fila do nivel 0
+[   4.162 s] PREEMPCAO  C (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 810 de 1000 ms do time-slice)
+[   4.162 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 300 ms do burst) | N0:[A(300)] N1:[B(2690) C(190)] N2:[]
+[   4.489 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE (mantem o nivel 0)
+[   4.489 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 190 ms dele; faltam 2690 ms do burst) | N0:[] N1:[B(2690) C(190)] N2:[]
+[   4.506 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   4.701 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 2500 ms -> desce para o nivel 2
+[   4.701 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 190 ms dele; faltam 190 ms do burst) | N0:[] N1:[C(190)] N2:[B(2500)]
+[   4.906 s] FIM BURST  C terminou o burst de CPU de 1500 ms -> DONE (mantem o nivel 1)
+[   4.906 s] DESPACHO   B do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 2500 ms do burst) | N0:[] N1:[] N2:[B(2500)]
+[   4.923 s] BLOQUEIO   C fica bloqueado 1000 ms (E/S)
+[   5.000 s] BOOST      todos os processos voltam ao nivel 0 (CPU: B) | N0:[] N1:[] N2:[]
+[   5.364 s] FIM E/S    A desbloqueado
+[   5.378 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   5.378 s] MLFQ       A entra na fila do nivel 0
+[   5.544 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 1920 ms -> desce para o nivel 1
+[   5.544 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 300 ms do burst) | N0:[A(300)] N1:[B(1920)] N2:[]
+[   5.869 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE (mantem o nivel 0)
+[   5.869 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1920 ms do burst) | N0:[] N1:[B(1920)] N2:[]
+[   5.885 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   6.005 s] FIM E/S    C desbloqueado
+[   6.019 s] PEDIDO RUN C pede novo burst de CPU de 1500 ms -> ready queue
+[   6.019 s] BOOST      C sobe do nivel 1 ao nivel 0 (houve boost enquanto nao estava pronto)
+[   6.019 s] MLFQ       C entra na fila do nivel 0
+[   6.019 s] PREEMPCAO  B (nivel 1) cede o CPU: ha processo pronto no nivel 0 -> fim da fila do nivel 1 (ja gastou 130 de 1000 ms do time-slice)
+[   6.019 s] DESPACHO   C do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 1500 ms do burst) | N0:[C(1500)] N1:[B(1790)] N2:[]
+[   6.561 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 1000 ms -> desce para o nivel 1
+[   6.561 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 870 ms dele; faltam 1790 ms do burst) | N0:[] N1:[B(1790) C(1000)] N2:[]
+[   6.747 s] FIM E/S    A desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[   6.761 s] SAIDA      A (pid 1316) terminou e fechou a ligacao
+[   7.498 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 920 ms -> desce para o nivel 2
+[   7.498 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1000 ms do burst) | N0:[] N1:[C(1000)] N2:[B(920)]
+[   8.567 s] FIM BURST  C terminou o burst de CPU de 1500 ms -> DONE (mantem o nivel 1)
+[   8.567 s] DESPACHO   B do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 920 ms do burst) | N0:[] N1:[] N2:[B(920)]
+[   8.585 s] BLOQUEIO   C fica bloqueado 1000 ms (E/S)
+[   9.542 s] FIM BURST  B terminou o burst de CPU de 4000 ms -> DONE (mantem o nivel 2)
+[   9.555 s] BLOQUEIO   B fica bloqueado 500 ms (E/S)
+[   9.632 s] FIM E/S    C desbloqueado
+[   9.645 s] PEDIDO RUN C pede novo burst de CPU de 1500 ms -> ready queue
+[   9.645 s] MLFQ       C entra na fila do nivel 1
+[   9.645 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1500 ms do burst) | N0:[] N1:[C(1500)] N2:[]
+[  10.002 s] BOOST      todos os processos voltam ao nivel 0 (CPU: C) | N0:[] N1:[] N2:[]
+[  10.087 s] FIM E/S    B desbloqueado
+[  10.100 s] PEDIDO RUN B pede novo burst de CPU de 4000 ms -> ready queue
+[  10.100 s] BOOST      B sobe do nivel 2 ao nivel 0 (houve boost enquanto nao estava pronto)
+[  10.100 s] MLFQ       B entra na fila do nivel 0
+[  10.541 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 670 ms -> desce para o nivel 1
+[  10.541 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 4000 ms do burst) | N0:[B(4000)] N1:[C(670)] N2:[]
+[  11.080 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 3500 ms -> desce para o nivel 1
+[  11.080 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 670 ms do burst) | N0:[] N1:[C(670) B(3500)] N2:[]
+[  11.792 s] FIM BURST  C terminou o burst de CPU de 1500 ms -> DONE (mantem o nivel 1)
+[  11.792 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 3500 ms do burst) | N0:[] N1:[B(3500)] N2:[]
+[  11.871 s] BLOQUEIO   C fica bloqueado 1000 ms (E/S)
+[  12.914 s] FIM E/S    C desbloqueado
+[  12.914 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 2500 ms -> desce para o nivel 2
+[  12.914 s] DESPACHO   B do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 2500 ms do burst) | N0:[] N1:[] N2:[B(2500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  12.933 s] SAIDA      C (pid 1320) terminou e fechou a ligacao
+[  15.002 s] BOOST      todos os processos voltam ao nivel 0 (CPU: B) | N0:[] N1:[] N2:[]
+[  15.512 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 30 ms -> desce para o nivel 1
+[  15.512 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 30 ms do burst) | N0:[] N1:[B(30)] N2:[]
+[  15.544 s] FIM BURST  B terminou o burst de CPU de 4000 ms -> DONE (mantem o nivel 1)
+[  15.556 s] BLOQUEIO   B fica bloqueado 500 ms (E/S)
+[  16.056 s] FIM E/S    B desbloqueado
+[  16.067 s] PEDIDO RUN B pede novo burst de CPU de 4000 ms -> ready queue
+[  16.067 s] MLFQ       B entra na fila do nivel 1
+[  16.067 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 4000 ms do burst) | N0:[] N1:[B(4000)] N2:[]
+[  17.113 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 3000 ms -> desce para o nivel 2
+[  17.113 s] DESPACHO   B do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 3000 ms do burst) | N0:[] N1:[] N2:[B(3000)]
+[  19.179 s] PREEMPCAO  B gastou o time-slice todo do nivel 2 (2000 ms), faltam 1000 ms -> fim da fila do nivel 2 (ultimo nivel)
+[  19.179 s] DESPACHO   B do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 1000 ms do burst) | N0:[] N1:[] N2:[B(1000)]
+[  20.011 s] BOOST      todos os processos voltam ao nivel 0 (CPU: B) | N0:[] N1:[] N2:[]
+[  20.237 s] FIM BURST  B terminou o burst de CPU de 4000 ms -> DONE (mantem o nivel 0)
+[  20.342 s] BLOQUEIO   B fica bloqueado 500 ms (E/S)
+[  20.854 s] FIM E/S    B desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  20.865 s] SAIDA      B (pid 1318) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (MLFQ) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1316 | 0.239 | 0.239 | 6.747 | 0.000 | 0.074 | 6.508 | 1.500 | 4.000 |
+| B | 1318 | 0.341 | 0.697 | 20.854 | 0.356 | 0.266 | 20.513 | 12.000 | 1.500 |
+| C | 1320 | 0.341 | 1.231 | 12.914 | 0.890 | 0.297 | 12.573 | 4.500 | 3.000 |
+| **Media** | | | | | 0.415 | 0.212 | 13.198 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

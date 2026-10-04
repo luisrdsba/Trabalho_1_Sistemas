@@ -1,0 +1,30 @@
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 995) sent RUN request for 5000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 995) at time 239 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 997) sent RUN request for 10000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 997) at time 360 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 999) sent RUN request for 4000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 999) at time 469 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application D (PID 1001) sent RUN request for 2000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application D (PID 1001) at time 569 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application E (PID 1003) sent RUN request for 3000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application E (PID 1003) at time 680 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application F (PID 1005) sent RUN request for 15000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application F (PID 1005) at time 778 ms
+
+Enqueued burst: time=5000 ms, block=0 ms, nice=0, pages=[]
+Application A (PID 995) finished at time 5539 ms, Elapsed: 5.300 seconds, CPU: 5.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=10000 ms, block=0 ms, nice=0, pages=[]
+Application B (PID 997) finished at time 15945 ms, Elapsed: 15.585 seconds, CPU: 10.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=4000 ms, block=0 ms, nice=0, pages=[]
+Application C (PID 999) finished at time 20134 ms, Elapsed: 19.665 seconds, CPU: 4.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=2000 ms, block=0 ms, nice=0, pages=[]
+Application D (PID 1001) finished at time 22230 ms, Elapsed: 21.661 seconds, CPU: 2.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=3000 ms, block=0 ms, nice=0, pages=[]
+Application E (PID 1003) finished at time 25337 ms, Elapsed: 24.657 seconds, CPU: 3.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=15000 ms, block=0 ms, nice=0, pages=[]
+Application F (PID 1005) finished at time 40929 ms, Elapsed: 40.151 seconds, CPU: 15.000 seconds, BLOCKED: 0.000 seconds

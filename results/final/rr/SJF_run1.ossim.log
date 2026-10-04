@@ -1,0 +1,47 @@
+OSSIM scheduler configured with algorithm SJF
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.103 s] CHEGADA    A (pid 1554) novo processo, burst de CPU de 5000 ms -> ready queue
+[   0.103 s] DESPACHO   A (burst 5000 ms): o burst mais curto de [A(5000)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.209 s] CHEGADA    B (pid 1556) novo processo, burst de CPU de 4500 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.393 s] CHEGADA    C (pid 1558) novo processo, burst de CPU de 4000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=7
+[   0.417 s] CHEGADA    D (pid 1560) novo processo, burst de CPU de 5000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=8
+[   0.522 s] CHEGADA    E (pid 1562) novo processo, burst de CPU de 4500 ms -> ready queue
+[   5.544 s] FIM BURST  A terminou o burst de CPU de 5000 ms -> DONE
+[   5.544 s] DESPACHO   C (burst 4000 ms): o burst mais curto de [B(4500) C(4000) D(5000) E(4500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[   5.562 s] SAIDA      A (pid 1554) terminou e fechou a ligacao
+[   9.782 s] FIM BURST  C terminou o burst de CPU de 4000 ms -> DONE
+[   9.782 s] DESPACHO   B (burst 4500 ms): o burst mais curto de [B(4500) D(5000) E(4500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[   9.798 s] SAIDA      C (pid 1558) terminou e fechou a ligacao
+[  14.538 s] FIM BURST  B terminou o burst de CPU de 4500 ms -> DONE
+[  14.538 s] DESPACHO   E (burst 4500 ms): o burst mais curto de [D(5000) E(4500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  14.554 s] SAIDA      B (pid 1556) terminou e fechou a ligacao
+[  19.306 s] FIM BURST  E terminou o burst de CPU de 4500 ms -> DONE
+[  19.306 s] DESPACHO   D (burst 5000 ms): o burst mais curto de [D(5000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=8)
+[  19.323 s] SAIDA      E (pid 1562) terminou e fechou a ligacao
+[  24.619 s] FIM BURST  D terminou o burst de CPU de 5000 ms -> DONE
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=7)
+[  24.632 s] SAIDA      D (pid 1560) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (SJF) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1554 | 0.103 | 0.103 | 5.544 | 0.000 | 0.000 | 5.441 | 5.000 | 0.000 |
+| B | 1556 | 0.209 | 9.782 | 14.538 | 9.573 | 9.573 | 14.329 | 4.500 | 0.000 |
+| C | 1558 | 0.393 | 5.544 | 9.782 | 5.151 | 5.151 | 9.389 | 4.000 | 0.000 |
+| D | 1560 | 0.417 | 19.306 | 24.619 | 18.889 | 18.889 | 24.202 | 5.000 | 0.000 |
+| E | 1562 | 0.522 | 14.538 | 19.306 | 14.016 | 14.016 | 18.784 | 4.500 | 0.000 |
+| **Media** | | | | | 9.526 | 9.526 | 14.429 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

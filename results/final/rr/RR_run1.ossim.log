@@ -1,0 +1,129 @@
+OSSIM scheduler configured with algorithm RR
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.250 s] CHEGADA    A (pid 1579) novo processo, burst de CPU de 5000 ms -> ready queue
+[   0.250 s] DESPACHO   A (faltam 5000 ms, time-slice 500 ms): o primeiro da ready queue [A(5000)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.353 s] CHEGADA    B (pid 1581) novo processo, burst de CPU de 4500 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.454 s] CHEGADA    C (pid 1583) novo processo, burst de CPU de 4000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=7
+[   0.565 s] CHEGADA    D (pid 1585) novo processo, burst de CPU de 5000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=8
+[   0.686 s] CHEGADA    E (pid 1587) novo processo, burst de CPU de 4500 ms -> ready queue
+[   0.814 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 4500 ms) -> fim da ready queue
+[   0.814 s] DESPACHO   B (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [B(4500) C(4000) D(5000) E(4500) A(4500)]
+[   1.338 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[   1.338 s] DESPACHO   C (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [C(4000) D(5000) E(4500) A(4500) B(4000)]
+[   2.018 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   2.018 s] DESPACHO   D (faltam 5000 ms, time-slice 500 ms): o primeiro da ready queue [D(5000) E(4500) A(4500) B(4000) C(3500)]
+[   2.554 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 4500 ms) -> fim da ready queue
+[   2.554 s] DESPACHO   E (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [E(4500) A(4500) B(4000) C(3500) D(4500)]
+[   3.089 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[   3.089 s] DESPACHO   A (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [A(4500) B(4000) C(3500) D(4500) E(4000)]
+[   3.788 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[   3.788 s] DESPACHO   B (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [B(4000) C(3500) D(4500) E(4000) A(4000)]
+[   4.326 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   4.326 s] DESPACHO   C (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [C(3500) D(4500) E(4000) A(4000) B(3500)]
+[   4.862 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[   4.862 s] DESPACHO   D (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [D(4500) E(4000) A(4000) B(3500) C(3000)]
+[   5.402 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[   5.402 s] DESPACHO   E (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [E(4000) A(4000) B(3500) C(3000) D(4000)]
+[   5.933 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   5.933 s] DESPACHO   A (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [A(4000) B(3500) C(3000) D(4000) E(3500)]
+[   6.486 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   6.486 s] DESPACHO   B (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [B(3500) C(3000) D(4000) E(3500) A(3500)]
+[   7.018 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[   7.018 s] DESPACHO   C (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [C(3000) D(4000) E(3500) A(3500) B(3000)]
+[   7.552 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[   7.552 s] DESPACHO   D (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [D(4000) E(3500) A(3500) B(3000) C(2500)]
+[   8.079 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   8.079 s] DESPACHO   E (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [E(3500) A(3500) B(3000) C(2500) D(3500)]
+[   8.599 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[   8.599 s] DESPACHO   A (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [A(3500) B(3000) C(2500) D(3500) E(3000)]
+[   9.131 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[   9.131 s] DESPACHO   B (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [B(3000) C(2500) D(3500) E(3000) A(3000)]
+[   9.663 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[   9.663 s] DESPACHO   C (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [C(2500) D(3500) E(3000) A(3000) B(2500)]
+[  10.193 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  10.193 s] DESPACHO   D (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [D(3500) E(3000) A(3000) B(2500) C(2000)]
+[  10.719 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[  10.719 s] DESPACHO   E (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [E(3000) A(3000) B(2500) C(2000) D(3000)]
+[  11.242 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[  11.242 s] DESPACHO   A (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [A(3000) B(2500) C(2000) D(3000) E(2500)]
+[  11.778 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[  11.778 s] DESPACHO   B (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [B(2500) C(2000) D(3000) E(2500) A(2500)]
+[  12.315 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  12.315 s] DESPACHO   C (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [C(2000) D(3000) E(2500) A(2500) B(2000)]
+[  12.969 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  12.969 s] DESPACHO   D (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [D(3000) E(2500) A(2500) B(2000) C(1500)]
+[  13.501 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[  13.501 s] DESPACHO   E (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [E(2500) A(2500) B(2000) C(1500) D(2500)]
+[  14.034 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  14.034 s] DESPACHO   A (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [A(2500) B(2000) C(1500) D(2500) E(2000)]
+[  14.569 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  14.569 s] DESPACHO   B (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [B(2000) C(1500) D(2500) E(2000) A(2000)]
+[  15.102 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  15.102 s] DESPACHO   C (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [C(1500) D(2500) E(2000) A(2000) B(1500)]
+[  15.632 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  15.632 s] DESPACHO   D (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [D(2500) E(2000) A(2000) B(1500) C(1000)]
+[  16.168 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  16.168 s] DESPACHO   E (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [E(2000) A(2000) B(1500) C(1000) D(2000)]
+[  16.697 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  16.697 s] DESPACHO   A (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [A(2000) B(1500) C(1000) D(2000) E(1500)]
+[  17.225 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  17.225 s] DESPACHO   B (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [B(1500) C(1000) D(2000) E(1500) A(1500)]
+[  17.736 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  17.736 s] DESPACHO   C (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [C(1000) D(2000) E(1500) A(1500) B(1000)]
+[  18.249 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  18.249 s] DESPACHO   D (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [D(2000) E(1500) A(1500) B(1000) C(500)]
+[  18.760 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  18.760 s] DESPACHO   E (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [E(1500) A(1500) B(1000) C(500) D(1500)]
+[  19.293 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  19.293 s] DESPACHO   A (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [A(1500) B(1000) C(500) D(1500) E(1000)]
+[  19.826 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  19.826 s] DESPACHO   B (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [B(1000) C(500) D(1500) E(1000) A(1000)]
+[  20.359 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  20.359 s] DESPACHO   C (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [C(500) D(1500) E(1000) A(1000) B(500)]
+[  20.884 s] FIM BURST  C terminou o burst de CPU de 4000 ms -> DONE
+[  20.884 s] DESPACHO   D (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [D(1500) E(1000) A(1000) B(500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  20.897 s] SAIDA      C (pid 1583) terminou e fechou a ligacao
+[  21.417 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  21.417 s] DESPACHO   E (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [E(1000) A(1000) B(500) D(1000)]
+[  21.955 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  21.955 s] DESPACHO   A (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [A(1000) B(500) D(1000) E(500)]
+[  22.478 s] PREEMPCAO  A esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  22.478 s] DESPACHO   B (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [B(500) D(1000) E(500) A(500)]
+[  23.004 s] FIM BURST  B terminou o burst de CPU de 4500 ms -> DONE
+[  23.004 s] DESPACHO   D (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [D(1000) E(500) A(500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  23.019 s] SAIDA      B (pid 1581) terminou e fechou a ligacao
+[  23.533 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  23.533 s] DESPACHO   E (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [E(500) A(500) D(500)]
+[  24.059 s] FIM BURST  E terminou o burst de CPU de 4500 ms -> DONE
+[  24.059 s] DESPACHO   A (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [A(500) D(500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=8)
+[  24.075 s] SAIDA      E (pid 1587) terminou e fechou a ligacao
+[  24.592 s] FIM BURST  A terminou o burst de CPU de 5000 ms -> DONE
+[  24.592 s] DESPACHO   D (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [D(500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[  24.609 s] SAIDA      A (pid 1579) terminou e fechou a ligacao
+[  25.119 s] FIM BURST  D terminou o burst de CPU de 5000 ms -> DONE
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=7)
+[  25.132 s] SAIDA      D (pid 1585) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (RR) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1579 | 0.250 | 0.250 | 24.592 | 0.000 | 0.000 | 24.342 | 5.000 | 0.000 |
+| B | 1581 | 0.353 | 0.814 | 23.004 | 0.461 | 0.461 | 22.651 | 4.500 | 0.000 |
+| C | 1583 | 0.454 | 1.338 | 20.884 | 0.884 | 0.884 | 20.430 | 4.000 | 0.000 |
+| D | 1585 | 0.565 | 2.018 | 25.119 | 1.453 | 1.453 | 24.554 | 5.000 | 0.000 |
+| E | 1587 | 0.686 | 2.554 | 24.059 | 1.868 | 1.868 | 23.373 | 4.500 | 0.000 |
+| **Media** | | | | | 0.933 | 0.933 | 23.070 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

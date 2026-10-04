@@ -1,0 +1,79 @@
+OSSIM scheduler configured with algorithm SJF
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.248 s] CHEGADA    A (pid 1274) novo processo, burst de CPU de 300 ms -> ready queue
+[   0.248 s] DESPACHO   A (burst 300 ms): o burst mais curto de [A(300)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.354 s] CHEGADA    B (pid 1276) novo processo, burst de CPU de 4000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.493 s] CHEGADA    C (pid 1278) novo processo, burst de CPU de 1500 ms -> ready queue
+[   0.701 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE
+[   0.701 s] DESPACHO   C (burst 1500 ms): o burst mais curto de [B(4000) C(1500)]
+[   0.716 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   1.548 s] FIM E/S    A desbloqueado
+[   1.571 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   2.301 s] FIM BURST  C terminou o burst de CPU de 1500 ms -> DONE
+[   2.301 s] DESPACHO   A (burst 300 ms): o burst mais curto de [B(4000) A(300)]
+[   2.315 s] BLOQUEIO   C fica bloqueado 1000 ms (E/S)
+[   2.621 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE
+[   2.621 s] DESPACHO   B (burst 4000 ms): o burst mais curto de [B(4000)]
+[   2.638 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   3.372 s] FIM E/S    C desbloqueado
+[   3.386 s] PEDIDO RUN C pede novo burst de CPU de 1500 ms -> ready queue
+[   3.482 s] FIM E/S    A desbloqueado
+[   3.496 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   6.857 s] FIM BURST  B terminou o burst de CPU de 4000 ms -> DONE
+[   6.857 s] DESPACHO   A (burst 300 ms): o burst mais curto de [C(1500) A(300)]
+[   6.870 s] BLOQUEIO   B fica bloqueado 500 ms (E/S)
+[   7.175 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE
+[   7.175 s] DESPACHO   C (burst 1500 ms): o burst mais curto de [C(1500)]
+[   7.192 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   7.395 s] FIM E/S    B desbloqueado
+[   7.409 s] PEDIDO RUN B pede novo burst de CPU de 4000 ms -> ready queue
+[   8.030 s] FIM E/S    A desbloqueado
+[   8.044 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[   8.769 s] FIM BURST  C terminou o burst de CPU de 1500 ms -> DONE
+[   8.769 s] DESPACHO   A (burst 300 ms): o burst mais curto de [B(4000) A(300)]
+[   8.791 s] BLOQUEIO   C fica bloqueado 1000 ms (E/S)
+[   9.100 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE
+[   9.100 s] DESPACHO   B (burst 4000 ms): o burst mais curto de [B(4000)]
+[   9.117 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[   9.843 s] FIM E/S    C desbloqueado
+[   9.870 s] PEDIDO RUN C pede novo burst de CPU de 1500 ms -> ready queue
+[   9.967 s] FIM E/S    A desbloqueado
+[   9.981 s] PEDIDO RUN A pede novo burst de CPU de 300 ms -> ready queue
+[  13.316 s] FIM BURST  B terminou o burst de CPU de 4000 ms -> DONE
+[  13.316 s] DESPACHO   A (burst 300 ms): o burst mais curto de [C(1500) A(300)]
+[  13.332 s] BLOQUEIO   B fica bloqueado 500 ms (E/S)
+[  13.638 s] FIM BURST  A terminou o burst de CPU de 300 ms -> DONE
+[  13.638 s] DESPACHO   C (burst 1500 ms): o burst mais curto de [C(1500)]
+[  13.654 s] BLOQUEIO   A fica bloqueado 800 ms (E/S)
+[  13.857 s] FIM E/S    B desbloqueado
+[  13.871 s] PEDIDO RUN B pede novo burst de CPU de 4000 ms -> ready queue
+[  14.483 s] FIM E/S    A desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[  14.497 s] SAIDA      A (pid 1274) terminou e fechou a ligacao
+[  15.227 s] FIM BURST  C terminou o burst de CPU de 1500 ms -> DONE
+[  15.227 s] DESPACHO   B (burst 4000 ms): o burst mais curto de [B(4000)]
+[  15.244 s] BLOQUEIO   C fica bloqueado 1000 ms (E/S)
+[  16.281 s] FIM E/S    C desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  16.295 s] SAIDA      C (pid 1278) terminou e fechou a ligacao
+[  19.445 s] FIM BURST  B terminou o burst de CPU de 4000 ms -> DONE
+[  19.457 s] BLOQUEIO   B fica bloqueado 500 ms (E/S)
+[  19.978 s] FIM E/S    B desbloqueado
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  19.992 s] SAIDA      B (pid 1276) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (SJF) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1274 | 0.248 | 0.248 | 14.483 | 0.000 | 1.630 | 14.235 | 1.500 | 4.000 |
+| B | 1276 | 0.354 | 2.621 | 19.978 | 2.267 | 1.771 | 19.624 | 12.000 | 1.500 |
+| C | 1278 | 0.493 | 0.701 | 16.281 | 0.208 | 2.588 | 15.788 | 4.500 | 3.000 |
+| **Media** | | | | | 0.825 | 1.997 | 16.549 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

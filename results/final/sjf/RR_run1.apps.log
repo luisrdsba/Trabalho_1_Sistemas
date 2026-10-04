@@ -1,0 +1,25 @@
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1476) sent RUN request for 500 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1476) at time 187 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 1478) sent RUN request for 10000 ms
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1480) sent RUN request for 6000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 1478) at time 315 ms
+
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1480) at time 487 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application D (PID 1482) sent RUN request for 1500 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application D (PID 1482) at time 523 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application E (PID 1484) sent RUN request for 800 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application E (PID 1484) at time 644 ms
+
+Enqueued burst: time=500 ms, block=0 ms, nice=0, pages=[]
+Application A (PID 1476) finished at time 892 ms, Elapsed: 0.705 seconds, CPU: 0.500 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=800 ms, block=0 ms, nice=0, pages=[]
+Application E (PID 1484) finished at time 4937 ms, Elapsed: 4.293 seconds, CPU: 0.800 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=1500 ms, block=0 ms, nice=0, pages=[]
+Application D (PID 1482) finished at time 6521 ms, Elapsed: 5.998 seconds, CPU: 1.500 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=6000 ms, block=0 ms, nice=0, pages=[]
+Application C (PID 1480) finished at time 16002 ms, Elapsed: 15.515 seconds, CPU: 6.000 seconds, BLOCKED: 0.000 seconds
+Enqueued burst: time=10000 ms, block=0 ms, nice=0, pages=[]
+Application B (PID 1478) finished at time 20187 ms, Elapsed: 19.872 seconds, CPU: 10.000 seconds, BLOCKED: 0.000 seconds

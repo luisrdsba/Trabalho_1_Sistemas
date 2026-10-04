@@ -1,0 +1,87 @@
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent RUN request for 200 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 198 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 1383) sent RUN request for 6000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 1383) at time 299 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent RUN request for 2000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 402 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent BLOCK request for 600 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 495 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent RUN request for 200 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 1136 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent BLOCK request for 600 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 2294 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent RUN request for 200 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 2935 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent BLOCK request for 600 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 4101 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent RUN request for 200 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 4744 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent BLOCK request for 700 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 5168 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent RUN request for 2000 ms
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent BLOCK request for 600 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 5907 ms
+
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 5907 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent RUN request for 200 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 6551 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent BLOCK request for 600 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 7727 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent RUN request for 200 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 8368 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application A (PID 1381) sent BLOCK request for 600 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A (PID 1381) at time 9559 ms
+
+Enqueued burst: time=200 ms, block=600 ms, nice=0, pages=[]
+Enqueued burst: time=200 ms, block=600 ms, nice=0, pages=[]
+Enqueued burst: time=200 ms, block=600 ms, nice=0, pages=[]
+Enqueued burst: time=200 ms, block=600 ms, nice=0, pages=[]
+Enqueued burst: time=200 ms, block=600 ms, nice=0, pages=[]
+Enqueued burst: time=200 ms, block=600 ms, nice=0, pages=[]
+Application A (PID 1381) finished at time 10167 ms, Elapsed: 9.969 seconds, CPU: 1.200 seconds, BLOCKED: 3.600 seconds
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent BLOCK request for 700 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 10593 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent RUN request for 2000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 11316 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 1383) sent BLOCK request for 300 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 1383) at time 12671 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 1383) sent RUN request for 6000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 1383) at time 12984 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent BLOCK request for 700 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 15300 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent RUN request for 2000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 16036 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C (PID 1385) sent BLOCK request for 700 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C (PID 1385) at time 20012 ms
+
+Enqueued burst: time=2000 ms, block=700 ms, nice=0, pages=[]
+Enqueued burst: time=2000 ms, block=700 ms, nice=0, pages=[]
+Enqueued burst: time=2000 ms, block=700 ms, nice=0, pages=[]
+Enqueued burst: time=2000 ms, block=700 ms, nice=0, pages=[]
+Application C (PID 1385) finished at time 20738 ms, Elapsed: 20.336 seconds, CPU: 8.000 seconds, BLOCKED: 2.800 seconds
+[/home/aluno/workspace/trabalho1/application.c:55] Application B (PID 1383) sent BLOCK request for 300 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B (PID 1383) at time 22640 ms
+
+Enqueued burst: time=6000 ms, block=300 ms, nice=0, pages=[]
+Enqueued burst: time=6000 ms, block=300 ms, nice=0, pages=[]
+Application B (PID 1383) finished at time 22941 ms, Elapsed: 22.642 seconds, CPU: 12.000 seconds, BLOCKED: 0.600 seconds

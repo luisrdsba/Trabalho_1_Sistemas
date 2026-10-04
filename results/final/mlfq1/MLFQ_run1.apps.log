@@ -1,0 +1,287 @@
+[/home/aluno/workspace/trabalho1/application.c:55] Application A_batch (PID 1694) sent RUN request for 8000 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application A_batch (PID 1694) at time 292 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 389 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 503 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 972 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 1133 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 1397 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 1515 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 1540 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 1708 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 1986 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 2100 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 2122 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 2460 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 2733 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 2854 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 2875 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 3045 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 3320 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 3440 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 3464 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 3632 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 3904 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 4025 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 4046 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 4213 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 4485 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 4605 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 4627 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 4795 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 5068 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 5319 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 5828 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 5999 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 6269 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 6390 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 6413 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 6580 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 6852 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 6973 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 6994 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 7164 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 7435 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 7556 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 7578 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 7746 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 8087 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 8207 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 8229 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 8397 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 8661 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 8785 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 8808 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 8976 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 9246 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 9526 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 9547 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 9716 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 10051 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 10168 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 10694 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 10863 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 11128 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 11239 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 11256 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 11413 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 11676 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 11796 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 11817 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 11985 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 12411 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 12532 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 12555 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 12722 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 12996 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 13117 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 13139 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 13302 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent RUN request for 100 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 13565 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent RUN request for 150 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 13679 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application B_inter (PID 1696) sent BLOCK request for 400 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application B_inter (PID 1696) at time 13702 ms
+
+[/home/aluno/workspace/trabalho1/application.c:55] Application C_inter (PID 1698) sent BLOCK request for 350 ms
+[/home/aluno/workspace/trabalho1/application.c:69] Received ACK from scheduler for application C_inter (PID 1698) at time 13870 ms
+
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Enqueued burst: time=100 ms, block=400 ms, nice=0, pages=[]
+Application B_inter (PID 1696) finished at time 14125 ms, Elapsed: 13.736 seconds, CPU: 2.000 seconds, BLOCKED: 8.000 seconds
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Enqueued burst: time=150 ms, block=350 ms, nice=0, pages=[]
+Application C_inter (PID 1698) finished at time 14239 ms, Elapsed: 13.736 seconds, CPU: 3.000 seconds, BLOCKED: 7.000 seconds
+Enqueued burst: time=8000 ms, block=0 ms, nice=0, pages=[]
+Application A_batch (PID 1694) finished at time 15601 ms, Elapsed: 15.309 seconds, CPU: 8.000 seconds, BLOCKED: 0.000 seconds

@@ -1,0 +1,54 @@
+OSSIM scheduler configured with algorithm FIFO
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.166 s] CHEGADA    A (pid 1048) novo processo, burst de CPU de 5000 ms -> ready queue
+[   0.166 s] DESPACHO   A (burst 5000 ms): o primeiro da ready queue [A(5000)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.282 s] CHEGADA    B (pid 1050) novo processo, burst de CPU de 10000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.397 s] CHEGADA    C (pid 1052) novo processo, burst de CPU de 4000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=7
+[   0.507 s] CHEGADA    D (pid 1054) novo processo, burst de CPU de 2000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=8
+[   0.619 s] CHEGADA    E (pid 1056) novo processo, burst de CPU de 3000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=9
+[   0.718 s] CHEGADA    F (pid 1058) novo processo, burst de CPU de 15000 ms -> ready queue
+[   5.533 s] FIM BURST  A terminou o burst de CPU de 5000 ms -> DONE
+[   5.533 s] DESPACHO   B (burst 10000 ms): o primeiro da ready queue [B(10000) C(4000) D(2000) E(3000) F(15000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[   5.546 s] SAIDA      A (pid 1048) terminou e fechou a ligacao
+[  15.996 s] FIM BURST  B terminou o burst de CPU de 10000 ms -> DONE
+[  15.996 s] DESPACHO   C (burst 4000 ms): o primeiro da ready queue [C(4000) D(2000) E(3000) F(15000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  16.013 s] SAIDA      B (pid 1050) terminou e fechou a ligacao
+[  20.224 s] FIM BURST  C terminou o burst de CPU de 4000 ms -> DONE
+[  20.224 s] DESPACHO   D (burst 2000 ms): o primeiro da ready queue [D(2000) E(3000) F(15000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  20.241 s] SAIDA      C (pid 1052) terminou e fechou a ligacao
+[  22.333 s] FIM BURST  D terminou o burst de CPU de 2000 ms -> DONE
+[  22.333 s] DESPACHO   E (burst 3000 ms): o primeiro da ready queue [E(3000) F(15000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=7)
+[  22.350 s] SAIDA      D (pid 1054) terminou e fechou a ligacao
+[  25.431 s] FIM BURST  E terminou o burst de CPU de 3000 ms -> DONE
+[  25.431 s] DESPACHO   F (burst 15000 ms): o primeiro da ready queue [F(15000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=8)
+[  25.443 s] SAIDA      E (pid 1056) terminou e fechou a ligacao
+[  41.094 s] FIM BURST  F terminou o burst de CPU de 15000 ms -> DONE
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=9)
+[  41.106 s] SAIDA      F (pid 1058) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (FIFO) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1048 | 0.166 | 0.166 | 5.533 | 0.000 | 0.000 | 5.367 | 5.000 | 0.000 |
+| B | 1050 | 0.282 | 5.533 | 15.996 | 5.251 | 5.251 | 15.714 | 10.000 | 0.000 |
+| C | 1052 | 0.397 | 15.996 | 20.224 | 15.599 | 15.599 | 19.827 | 4.000 | 0.000 |
+| D | 1054 | 0.507 | 20.224 | 22.333 | 19.717 | 19.717 | 21.826 | 2.000 | 0.000 |
+| E | 1056 | 0.619 | 22.333 | 25.431 | 21.714 | 21.714 | 24.812 | 3.000 | 0.000 |
+| F | 1058 | 0.718 | 25.431 | 41.094 | 24.713 | 24.713 | 40.376 | 15.000 | 0.000 |
+| **Media** | | | | | 14.499 | 14.499 | 21.320 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

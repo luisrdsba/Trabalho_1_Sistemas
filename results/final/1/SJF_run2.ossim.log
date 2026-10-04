@@ -1,0 +1,33 @@
+OSSIM scheduler configured with algorithm SJF
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.248 s] CHEGADA    A (pid 802) novo processo, burst de CPU de 10000 ms -> ready queue
+[   0.248 s] DESPACHO   A (burst 10000 ms): o burst mais curto de [A(10000)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.351 s] CHEGADA    B (pid 804) novo processo, burst de CPU de 15000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.489 s] CHEGADA    C (pid 806) novo processo, burst de CPU de 20000 ms -> ready queue
+[  10.860 s] FIM BURST  A terminou o burst de CPU de 10000 ms -> DONE
+[  10.860 s] DESPACHO   B (burst 15000 ms): o burst mais curto de [B(15000) C(20000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[  10.877 s] SAIDA      A (pid 802) terminou e fechou a ligacao
+[  26.569 s] FIM BURST  B terminou o burst de CPU de 15000 ms -> DONE
+[  26.569 s] DESPACHO   C (burst 20000 ms): o burst mais curto de [C(20000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  26.581 s] SAIDA      B (pid 804) terminou e fechou a ligacao
+[  47.320 s] FIM BURST  C terminou o burst de CPU de 20000 ms -> DONE
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  47.334 s] SAIDA      C (pid 806) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (SJF) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 802 | 0.248 | 0.248 | 10.860 | 0.000 | 0.000 | 10.612 | 10.000 | 0.000 |
+| B | 804 | 0.351 | 10.860 | 26.569 | 10.509 | 10.509 | 26.218 | 15.000 | 0.000 |
+| C | 806 | 0.489 | 26.569 | 47.320 | 26.080 | 26.080 | 46.831 | 20.000 | 0.000 |
+| **Media** | | | | | 12.196 | 12.196 | 27.887 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

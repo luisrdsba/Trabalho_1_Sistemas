@@ -1,0 +1,47 @@
+OSSIM scheduler configured with algorithm FIFO
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.281 s] CHEGADA    A (pid 1425) novo processo, burst de CPU de 500 ms -> ready queue
+[   0.281 s] DESPACHO   A (burst 500 ms): o primeiro da ready queue [A(500)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.374 s] CHEGADA    B (pid 1427) novo processo, burst de CPU de 10000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=7
+[   0.570 s] CHEGADA    C (pid 1429) novo processo, burst de CPU de 6000 ms -> ready queue
+[   0.570 s] CHEGADA    D (pid 1431) novo processo, burst de CPU de 1500 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=8
+[   0.725 s] CHEGADA    E (pid 1433) novo processo, burst de CPU de 800 ms -> ready queue
+[   1.029 s] FIM BURST  A terminou o burst de CPU de 500 ms -> DONE
+[   1.029 s] DESPACHO   B (burst 10000 ms): o primeiro da ready queue [B(10000) C(6000) D(1500) E(800)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[   1.041 s] SAIDA      A (pid 1425) terminou e fechou a ligacao
+[  11.570 s] FIM BURST  B terminou o burst de CPU de 10000 ms -> DONE
+[  11.570 s] DESPACHO   C (burst 6000 ms): o primeiro da ready queue [C(6000) D(1500) E(800)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  11.586 s] SAIDA      B (pid 1427) terminou e fechou a ligacao
+[  17.904 s] FIM BURST  C terminou o burst de CPU de 6000 ms -> DONE
+[  17.904 s] DESPACHO   D (burst 1500 ms): o primeiro da ready queue [D(1500) E(800)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  17.920 s] SAIDA      C (pid 1429) terminou e fechou a ligacao
+[  19.487 s] FIM BURST  D terminou o burst de CPU de 1500 ms -> DONE
+[  19.487 s] DESPACHO   E (burst 800 ms): o primeiro da ready queue [E(800)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=7)
+[  19.504 s] SAIDA      D (pid 1431) terminou e fechou a ligacao
+[  20.346 s] FIM BURST  E terminou o burst de CPU de 800 ms -> DONE
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=8)
+[  20.357 s] SAIDA      E (pid 1433) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (FIFO) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1425 | 0.281 | 0.281 | 1.029 | 0.000 | 0.000 | 0.748 | 0.500 | 0.000 |
+| B | 1427 | 0.374 | 1.029 | 11.570 | 0.655 | 0.655 | 11.196 | 10.000 | 0.000 |
+| C | 1429 | 0.570 | 11.570 | 17.904 | 11.000 | 11.000 | 17.334 | 6.000 | 0.000 |
+| D | 1431 | 0.570 | 17.904 | 19.487 | 17.334 | 17.334 | 18.917 | 1.500 | 0.000 |
+| E | 1433 | 0.725 | 19.487 | 20.346 | 18.762 | 18.762 | 19.621 | 0.800 | 0.000 |
+| **Media** | | | | | 9.550 | 9.550 | 13.563 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

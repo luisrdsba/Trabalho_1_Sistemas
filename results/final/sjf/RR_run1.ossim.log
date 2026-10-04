@@ -1,0 +1,106 @@
+OSSIM scheduler configured with algorithm RR
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.187 s] CHEGADA    A (pid 1476) novo processo, burst de CPU de 500 ms -> ready queue
+[   0.187 s] DESPACHO   A (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [A(500)]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[   0.315 s] CHEGADA    B (pid 1478) novo processo, burst de CPU de 10000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.487 s] CHEGADA    C (pid 1480) novo processo, burst de CPU de 6000 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=7
+[   0.523 s] CHEGADA    D (pid 1482) novo processo, burst de CPU de 1500 ms -> ready queue
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=8
+[   0.644 s] CHEGADA    E (pid 1484) novo processo, burst de CPU de 800 ms -> ready queue
+[   0.892 s] FIM BURST  A terminou o burst de CPU de 500 ms -> DONE
+[   0.892 s] DESPACHO   B (faltam 10000 ms, time-slice 500 ms): o primeiro da ready queue [B(10000) C(6000) D(1500) E(800)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[   0.909 s] SAIDA      A (pid 1476) terminou e fechou a ligacao
+[   1.429 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 9500 ms) -> fim da ready queue
+[   1.429 s] DESPACHO   C (faltam 6000 ms, time-slice 500 ms): o primeiro da ready queue [C(6000) D(1500) E(800) B(9500)]
+[   1.953 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 5500 ms) -> fim da ready queue
+[   1.953 s] DESPACHO   D (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [D(1500) E(800) B(9500) C(5500)]
+[   2.488 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[   2.488 s] DESPACHO   E (faltam 800 ms, time-slice 500 ms): o primeiro da ready queue [E(800) B(9500) C(5500) D(1000)]
+[   3.023 s] PREEMPCAO  E esgotou o time-slice de 500 ms (faltam 300 ms) -> fim da ready queue
+[   3.023 s] DESPACHO   B (faltam 9500 ms, time-slice 500 ms): o primeiro da ready queue [B(9500) C(5500) D(1000) E(300)]
+[   3.555 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 9000 ms) -> fim da ready queue
+[   3.555 s] DESPACHO   C (faltam 5500 ms, time-slice 500 ms): o primeiro da ready queue [C(5500) D(1000) E(300) B(9000)]
+[   4.088 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 5000 ms) -> fim da ready queue
+[   4.088 s] DESPACHO   D (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [D(1000) E(300) B(9000) C(5000)]
+[   4.620 s] PREEMPCAO  D esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[   4.620 s] DESPACHO   E (faltam 300 ms, time-slice 500 ms): o primeiro da ready queue [E(300) B(9000) C(5000) D(500)]
+[   4.937 s] FIM BURST  E terminou o burst de CPU de 800 ms -> DONE
+[   4.937 s] DESPACHO   B (faltam 9000 ms, time-slice 500 ms): o primeiro da ready queue [B(9000) C(5000) D(500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=8)
+[   4.951 s] SAIDA      E (pid 1484) terminou e fechou a ligacao
+[   5.466 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 8500 ms) -> fim da ready queue
+[   5.466 s] DESPACHO   C (faltam 5000 ms, time-slice 500 ms): o primeiro da ready queue [C(5000) D(500) B(8500)]
+[   5.996 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 4500 ms) -> fim da ready queue
+[   5.996 s] DESPACHO   D (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [D(500) B(8500) C(4500)]
+[   6.521 s] FIM BURST  D terminou o burst de CPU de 1500 ms -> DONE
+[   6.521 s] DESPACHO   B (faltam 8500 ms, time-slice 500 ms): o primeiro da ready queue [B(8500) C(4500)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=7)
+[   6.535 s] SAIDA      D (pid 1482) terminou e fechou a ligacao
+[   7.041 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 8000 ms) -> fim da ready queue
+[   7.041 s] DESPACHO   C (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [C(4500) B(8000)]
+[   7.556 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[   7.556 s] DESPACHO   B (faltam 8000 ms, time-slice 500 ms): o primeiro da ready queue [B(8000) C(4000)]
+[   8.078 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 7500 ms) -> fim da ready queue
+[   8.078 s] DESPACHO   C (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [C(4000) B(7500)]
+[   8.594 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 3500 ms) -> fim da ready queue
+[   8.594 s] DESPACHO   B (faltam 7500 ms, time-slice 500 ms): o primeiro da ready queue [B(7500) C(3500)]
+[   9.104 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 7000 ms) -> fim da ready queue
+[   9.104 s] DESPACHO   C (faltam 3500 ms, time-slice 500 ms): o primeiro da ready queue [C(3500) B(7000)]
+[   9.615 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 3000 ms) -> fim da ready queue
+[   9.615 s] DESPACHO   B (faltam 7000 ms, time-slice 500 ms): o primeiro da ready queue [B(7000) C(3000)]
+[  10.244 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 6500 ms) -> fim da ready queue
+[  10.244 s] DESPACHO   C (faltam 3000 ms, time-slice 500 ms): o primeiro da ready queue [C(3000) B(6500)]
+[  10.758 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 2500 ms) -> fim da ready queue
+[  10.758 s] DESPACHO   B (faltam 6500 ms, time-slice 500 ms): o primeiro da ready queue [B(6500) C(2500)]
+[  11.272 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 6000 ms) -> fim da ready queue
+[  11.272 s] DESPACHO   C (faltam 2500 ms, time-slice 500 ms): o primeiro da ready queue [C(2500) B(6000)]
+[  11.784 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 2000 ms) -> fim da ready queue
+[  11.784 s] DESPACHO   B (faltam 6000 ms, time-slice 500 ms): o primeiro da ready queue [B(6000) C(2000)]
+[  12.299 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 5500 ms) -> fim da ready queue
+[  12.299 s] DESPACHO   C (faltam 2000 ms, time-slice 500 ms): o primeiro da ready queue [C(2000) B(5500)]
+[  12.832 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 1500 ms) -> fim da ready queue
+[  12.832 s] DESPACHO   B (faltam 5500 ms, time-slice 500 ms): o primeiro da ready queue [B(5500) C(1500)]
+[  13.365 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 5000 ms) -> fim da ready queue
+[  13.365 s] DESPACHO   C (faltam 1500 ms, time-slice 500 ms): o primeiro da ready queue [C(1500) B(5000)]
+[  13.894 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 1000 ms) -> fim da ready queue
+[  13.894 s] DESPACHO   B (faltam 5000 ms, time-slice 500 ms): o primeiro da ready queue [B(5000) C(1000)]
+[  14.416 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 4500 ms) -> fim da ready queue
+[  14.416 s] DESPACHO   C (faltam 1000 ms, time-slice 500 ms): o primeiro da ready queue [C(1000) B(4500)]
+[  14.945 s] PREEMPCAO  C esgotou o time-slice de 500 ms (faltam 500 ms) -> fim da ready queue
+[  14.945 s] DESPACHO   B (faltam 4500 ms, time-slice 500 ms): o primeiro da ready queue [B(4500) C(500)]
+[  15.479 s] PREEMPCAO  B esgotou o time-slice de 500 ms (faltam 4000 ms) -> fim da ready queue
+[  15.479 s] DESPACHO   C (faltam 500 ms, time-slice 500 ms): o primeiro da ready queue [C(500) B(4000)]
+[  16.002 s] FIM BURST  C terminou o burst de CPU de 6000 ms -> DONE
+[  16.002 s] DESPACHO   B (faltam 4000 ms, time-slice 500 ms): o primeiro da ready queue [B(4000)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  16.018 s] SAIDA      C (pid 1480) terminou e fechou a ligacao
+[  16.530 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 3500 ms)
+[  17.051 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 3000 ms)
+[  17.566 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 2500 ms)
+[  18.091 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 2000 ms)
+[  18.619 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 1500 ms)
+[  19.140 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 1000 ms)
+[  19.661 s] QUANTUM    B esgotou o time-slice mas a ready queue esta vazia -> continua (faltam 500 ms)
+[  20.187 s] FIM BURST  B terminou o burst de CPU de 10000 ms -> DONE
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  20.201 s] SAIDA      B (pid 1478) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (RR) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1476 | 0.187 | 0.187 | 0.892 | 0.000 | 0.000 | 0.705 | 0.500 | 0.000 |
+| B | 1478 | 0.315 | 0.892 | 20.187 | 0.577 | 0.577 | 19.872 | 10.000 | 0.000 |
+| C | 1480 | 0.487 | 1.429 | 16.002 | 0.942 | 0.942 | 15.515 | 6.000 | 0.000 |
+| D | 1482 | 0.523 | 1.953 | 6.521 | 1.430 | 1.430 | 5.998 | 1.500 | 0.000 |
+| E | 1484 | 0.644 | 2.488 | 4.937 | 1.844 | 1.844 | 4.293 | 0.800 | 0.000 |
+| **Media** | | | | | 0.959 | 0.959 | 9.277 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

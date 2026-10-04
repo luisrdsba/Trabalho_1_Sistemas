@@ -1,0 +1,160 @@
+OSSIM scheduler configured with algorithm MLFQ
+Scheduler server listening on /tmp/scheduler.sock...
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=4
+[   0.175 s] CHEGADA    A (pid 1213) novo processo, burst de CPU de 5000 ms -> ready queue
+[   0.175 s] MLFQ       A entra na fila do nivel 0
+[   0.175 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 5000 ms do burst) | N0:[A(5000)] N1:[] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=5
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=6
+[   0.280 s] CHEGADA    B (pid 1215) novo processo, burst de CPU de 10000 ms -> ready queue
+[   0.280 s] CHEGADA    C (pid 1217) novo processo, burst de CPU de 4000 ms -> ready queue
+[   0.280 s] MLFQ       B entra na fila do nivel 0
+[   0.280 s] MLFQ       C entra na fila do nivel 0
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=7
+[   0.493 s] CHEGADA    D (pid 1219) novo processo, burst de CPU de 2000 ms -> ready queue
+[   0.493 s] MLFQ       D entra na fila do nivel 0
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=8
+[   0.590 s] CHEGADA    E (pid 1221) novo processo, burst de CPU de 3000 ms -> ready queue
+[   0.590 s] MLFQ       E entra na fila do nivel 0
+[/home/aluno/workspace/trabalho1/queue.c:214] [Scheduler] New client connected: fd=9
+[   0.698 s] CHEGADA    F (pid 1223) novo processo, burst de CPU de 15000 ms -> ready queue
+[   0.698 s] MLFQ       F entra na fila do nivel 0
+[   0.851 s] PREEMPCAO  A gastou o time-slice todo do nivel 0 (500 ms), faltam 4500 ms -> desce para o nivel 1
+[   0.851 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 10000 ms do burst) | N0:[B(10000) C(4000) D(2000) E(3000) F(15000)] N1:[A(4500)] N2:[]
+[   1.379 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 9500 ms -> desce para o nivel 1
+[   1.379 s] DESPACHO   C do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 4000 ms do burst) | N0:[C(4000) D(2000) E(3000) F(15000)] N1:[A(4500) B(9500)] N2:[]
+[   1.909 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 3500 ms -> desce para o nivel 1
+[   1.909 s] DESPACHO   D do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 2000 ms do burst) | N0:[D(2000) E(3000) F(15000)] N1:[A(4500) B(9500) C(3500)] N2:[]
+[   2.433 s] PREEMPCAO  D gastou o time-slice todo do nivel 0 (500 ms), faltam 1500 ms -> desce para o nivel 1
+[   2.433 s] DESPACHO   E do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 3000 ms do burst) | N0:[E(3000) F(15000)] N1:[A(4500) B(9500) C(3500) D(1500)] N2:[]
+[   2.955 s] PREEMPCAO  E gastou o time-slice todo do nivel 0 (500 ms), faltam 2500 ms -> desce para o nivel 1
+[   2.955 s] DESPACHO   F do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 15000 ms do burst) | N0:[F(15000)] N1:[A(4500) B(9500) C(3500) D(1500) E(2500)] N2:[]
+[   3.471 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 14500 ms -> desce para o nivel 1
+[   3.471 s] DESPACHO   A do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 4500 ms do burst) | N0:[] N1:[A(4500) B(9500) C(3500) D(1500) E(2500) F(14500)] N2:[]
+[   4.513 s] PREEMPCAO  A gastou o time-slice todo do nivel 1 (1000 ms), faltam 3500 ms -> desce para o nivel 2
+[   4.513 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 9500 ms do burst) | N0:[] N1:[B(9500) C(3500) D(1500) E(2500) F(14500)] N2:[A(3500)]
+[   5.000 s] BOOST      todos os processos voltam ao nivel 0 (CPU: B) | N0:[C(3500) D(1500) E(2500) F(14500) A(3500)] N1:[] N2:[]
+[   5.521 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 8540 ms -> desce para o nivel 1
+[   5.521 s] DESPACHO   C do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 3500 ms do burst) | N0:[C(3500) D(1500) E(2500) F(14500) A(3500)] N1:[B(8540)] N2:[]
+[   6.056 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 3000 ms -> desce para o nivel 1
+[   6.056 s] DESPACHO   D do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 1500 ms do burst) | N0:[D(1500) E(2500) F(14500) A(3500)] N1:[B(8540) C(3000)] N2:[]
+[   6.582 s] PREEMPCAO  D gastou o time-slice todo do nivel 0 (500 ms), faltam 1000 ms -> desce para o nivel 1
+[   6.582 s] DESPACHO   E do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 2500 ms do burst) | N0:[E(2500) F(14500) A(3500)] N1:[B(8540) C(3000) D(1000)] N2:[]
+[   7.111 s] PREEMPCAO  E gastou o time-slice todo do nivel 0 (500 ms), faltam 2000 ms -> desce para o nivel 1
+[   7.111 s] DESPACHO   F do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 14500 ms do burst) | N0:[F(14500) A(3500)] N1:[B(8540) C(3000) D(1000) E(2000)] N2:[]
+[   7.640 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 14000 ms -> desce para o nivel 1
+[   7.640 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 3500 ms do burst) | N0:[A(3500)] N1:[B(8540) C(3000) D(1000) E(2000) F(14000)] N2:[]
+[   8.163 s] PREEMPCAO  A gastou o time-slice todo do nivel 0 (500 ms), faltam 3000 ms -> desce para o nivel 1
+[   8.163 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 8540 ms do burst) | N0:[] N1:[B(8540) C(3000) D(1000) E(2000) F(14000) A(3000)] N2:[]
+[   9.211 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 7540 ms -> desce para o nivel 2
+[   9.211 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 3000 ms do burst) | N0:[] N1:[C(3000) D(1000) E(2000) F(14000) A(3000)] N2:[B(7540)]
+[  10.000 s] BOOST      todos os processos voltam ao nivel 0 (CPU: C) | N0:[D(1000) E(2000) F(14000) A(3000) B(7540)] N1:[] N2:[]
+[  10.529 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 1760 ms -> desce para o nivel 1
+[  10.529 s] DESPACHO   D do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 1000 ms do burst) | N0:[D(1000) E(2000) F(14000) A(3000) B(7540)] N1:[C(1760)] N2:[]
+[  11.053 s] PREEMPCAO  D gastou o time-slice todo do nivel 0 (500 ms), faltam 500 ms -> desce para o nivel 1
+[  11.053 s] DESPACHO   E do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 2000 ms do burst) | N0:[E(2000) F(14000) A(3000) B(7540)] N1:[C(1760) D(500)] N2:[]
+[  11.581 s] PREEMPCAO  E gastou o time-slice todo do nivel 0 (500 ms), faltam 1500 ms -> desce para o nivel 1
+[  11.581 s] DESPACHO   F do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 14000 ms do burst) | N0:[F(14000) A(3000) B(7540)] N1:[C(1760) D(500) E(1500)] N2:[]
+[  12.177 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 13500 ms -> desce para o nivel 1
+[  12.177 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 3000 ms do burst) | N0:[A(3000) B(7540)] N1:[C(1760) D(500) E(1500) F(13500)] N2:[]
+[  12.712 s] PREEMPCAO  A gastou o time-slice todo do nivel 0 (500 ms), faltam 2500 ms -> desce para o nivel 1
+[  12.712 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 7540 ms do burst) | N0:[B(7540)] N1:[C(1760) D(500) E(1500) F(13500) A(2500)] N2:[]
+[  13.238 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 7040 ms -> desce para o nivel 1
+[  13.238 s] DESPACHO   C do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1760 ms do burst) | N0:[] N1:[C(1760) D(500) E(1500) F(13500) A(2500) B(7040)] N2:[]
+[  14.304 s] PREEMPCAO  C gastou o time-slice todo do nivel 1 (1000 ms), faltam 760 ms -> desce para o nivel 2
+[  14.304 s] DESPACHO   D do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 500 ms do burst) | N0:[] N1:[D(500) E(1500) F(13500) A(2500) B(7040)] N2:[C(760)]
+[  14.839 s] FIM BURST  D terminou o burst de CPU de 2000 ms -> DONE (mantem o nivel 1)
+[  14.839 s] DESPACHO   E do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1500 ms do burst) | N0:[] N1:[E(1500) F(13500) A(2500) B(7040)] N2:[C(760)]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=7)
+[  14.857 s] SAIDA      D (pid 1219) terminou e fechou a ligacao
+[  15.002 s] BOOST      todos os processos voltam ao nivel 0 (CPU: E) | N0:[F(13500) A(2500) B(7040) C(760)] N1:[] N2:[]
+[  15.522 s] PREEMPCAO  E gastou o time-slice todo do nivel 0 (500 ms), faltam 860 ms -> desce para o nivel 1
+[  15.522 s] DESPACHO   F do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 13500 ms do burst) | N0:[F(13500) A(2500) B(7040) C(760)] N1:[E(860)] N2:[]
+[  16.045 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 13000 ms -> desce para o nivel 1
+[  16.045 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 2500 ms do burst) | N0:[A(2500) B(7040) C(760)] N1:[E(860) F(13000)] N2:[]
+[  16.575 s] PREEMPCAO  A gastou o time-slice todo do nivel 0 (500 ms), faltam 2000 ms -> desce para o nivel 1
+[  16.575 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 7040 ms do burst) | N0:[B(7040) C(760)] N1:[E(860) F(13000) A(2000)] N2:[]
+[  17.102 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 6540 ms -> desce para o nivel 1
+[  17.102 s] DESPACHO   C do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 760 ms do burst) | N0:[C(760)] N1:[E(860) F(13000) A(2000) B(6540)] N2:[]
+[  17.632 s] PREEMPCAO  C gastou o time-slice todo do nivel 0 (500 ms), faltam 260 ms -> desce para o nivel 1
+[  17.632 s] DESPACHO   E do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 860 ms do burst) | N0:[] N1:[E(860) F(13000) A(2000) B(6540) C(260)] N2:[]
+[  18.530 s] FIM BURST  E terminou o burst de CPU de 3000 ms -> DONE (mantem o nivel 1)
+[  18.530 s] DESPACHO   F do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 13000 ms do burst) | N0:[] N1:[F(13000) A(2000) B(6540) C(260)] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=8)
+[  18.543 s] SAIDA      E (pid 1221) terminou e fechou a ligacao
+[  19.570 s] PREEMPCAO  F gastou o time-slice todo do nivel 1 (1000 ms), faltam 12000 ms -> desce para o nivel 2
+[  19.570 s] DESPACHO   A do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 2000 ms do burst) | N0:[] N1:[A(2000) B(6540) C(260)] N2:[F(12000)]
+[  20.007 s] BOOST      todos os processos voltam ao nivel 0 (CPU: A) | N0:[B(6540) C(260) F(12000)] N1:[] N2:[]
+[  20.537 s] PREEMPCAO  A gastou o time-slice todo do nivel 0 (500 ms), faltam 1090 ms -> desce para o nivel 1
+[  20.537 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 6540 ms do burst) | N0:[B(6540) C(260) F(12000)] N1:[A(1090)] N2:[]
+[  21.073 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 6040 ms -> desce para o nivel 1
+[  21.073 s] DESPACHO   C do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 260 ms do burst) | N0:[C(260) F(12000)] N1:[A(1090) B(6040)] N2:[]
+[  21.347 s] FIM BURST  C terminou o burst de CPU de 4000 ms -> DONE (mantem o nivel 0)
+[  21.347 s] DESPACHO   F do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 12000 ms do burst) | N0:[F(12000)] N1:[A(1090) B(6040)] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=6)
+[  21.361 s] SAIDA      C (pid 1217) terminou e fechou a ligacao
+[  21.871 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 11500 ms -> desce para o nivel 1
+[  21.871 s] DESPACHO   A do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1090 ms do burst) | N0:[] N1:[A(1090) B(6040) F(11500)] N2:[]
+[  22.914 s] PREEMPCAO  A gastou o time-slice todo do nivel 1 (1000 ms), faltam 90 ms -> desce para o nivel 2
+[  22.914 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 6040 ms do burst) | N0:[] N1:[B(6040) F(11500)] N2:[A(90)]
+[  23.954 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 5040 ms -> desce para o nivel 2
+[  23.954 s] DESPACHO   F do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 11500 ms do burst) | N0:[] N1:[F(11500)] N2:[A(90) B(5040)]
+[  25.008 s] BOOST      todos os processos voltam ao nivel 0 (CPU: F) | N0:[A(90) B(5040)] N1:[] N2:[]
+[  25.533 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 10010 ms -> desce para o nivel 1
+[  25.533 s] DESPACHO   A do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 90 ms do burst) | N0:[A(90) B(5040)] N1:[F(10010)] N2:[]
+[  25.634 s] FIM BURST  A terminou o burst de CPU de 5000 ms -> DONE (mantem o nivel 0)
+[  25.634 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 5040 ms do burst) | N0:[B(5040)] N1:[F(10010)] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=4)
+[  25.651 s] SAIDA      A (pid 1213) terminou e fechou a ligacao
+[  26.176 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 4540 ms -> desce para o nivel 1
+[  26.176 s] DESPACHO   F do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 10010 ms do burst) | N0:[] N1:[F(10010) B(4540)] N2:[]
+[  27.244 s] PREEMPCAO  F gastou o time-slice todo do nivel 1 (1000 ms), faltam 9010 ms -> desce para o nivel 2
+[  27.244 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 4540 ms do burst) | N0:[] N1:[B(4540)] N2:[F(9010)]
+[  28.296 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 3540 ms -> desce para o nivel 2
+[  28.296 s] DESPACHO   F do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 9010 ms do burst) | N0:[] N1:[] N2:[F(9010) B(3540)]
+[  30.016 s] BOOST      todos os processos voltam ao nivel 0 (CPU: F) | N0:[B(3540)] N1:[] N2:[]
+[  30.549 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 6890 ms -> desce para o nivel 1
+[  30.549 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 3540 ms do burst) | N0:[B(3540)] N1:[F(6890)] N2:[]
+[  31.096 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 3040 ms -> desce para o nivel 1
+[  31.096 s] DESPACHO   F do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 6890 ms do burst) | N0:[] N1:[F(6890) B(3040)] N2:[]
+[  32.118 s] PREEMPCAO  F gastou o time-slice todo do nivel 1 (1000 ms), faltam 5890 ms -> desce para o nivel 2
+[  32.118 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 3040 ms do burst) | N0:[] N1:[B(3040)] N2:[F(5890)]
+[  33.166 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 2040 ms -> desce para o nivel 2
+[  33.166 s] DESPACHO   F do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 5890 ms do burst) | N0:[] N1:[] N2:[F(5890) B(2040)]
+[  35.019 s] BOOST      todos os processos voltam ao nivel 0 (CPU: F) | N0:[B(2040)] N1:[] N2:[]
+[  35.543 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 3640 ms -> desce para o nivel 1
+[  35.543 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 2040 ms do burst) | N0:[B(2040)] N1:[F(3640)] N2:[]
+[  36.076 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 1540 ms -> desce para o nivel 1
+[  36.076 s] DESPACHO   F do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 3640 ms do burst) | N0:[] N1:[F(3640) B(1540)] N2:[]
+[  37.125 s] PREEMPCAO  F gastou o time-slice todo do nivel 1 (1000 ms), faltam 2640 ms -> desce para o nivel 2
+[  37.125 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 1540 ms do burst) | N0:[] N1:[B(1540)] N2:[F(2640)]
+[  38.171 s] PREEMPCAO  B gastou o time-slice todo do nivel 1 (1000 ms), faltam 540 ms -> desce para o nivel 2
+[  38.171 s] DESPACHO   F do nivel 2 (time-slice 2000 ms, restam 2000 ms dele; faltam 2640 ms do burst) | N0:[] N1:[] N2:[F(2640) B(540)]
+[  40.025 s] BOOST      todos os processos voltam ao nivel 0 (CPU: F) | N0:[B(540)] N1:[] N2:[]
+[  40.561 s] PREEMPCAO  F gastou o time-slice todo do nivel 0 (500 ms), faltam 390 ms -> desce para o nivel 1
+[  40.561 s] DESPACHO   B do nivel 0 (time-slice 500 ms, restam 500 ms dele; faltam 540 ms do burst) | N0:[B(540)] N1:[F(390)] N2:[]
+[  41.095 s] PREEMPCAO  B gastou o time-slice todo do nivel 0 (500 ms), faltam 40 ms -> desce para o nivel 1
+[  41.095 s] DESPACHO   F do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 390 ms do burst) | N0:[] N1:[F(390) B(40)] N2:[]
+[  41.511 s] FIM BURST  F terminou o burst de CPU de 15000 ms -> DONE (mantem o nivel 1)
+[  41.511 s] DESPACHO   B do nivel 1 (time-slice 1000 ms, restam 1000 ms dele; faltam 40 ms do burst) | N0:[] N1:[B(40)] N2:[]
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=9)
+[  41.528 s] SAIDA      F (pid 1223) terminou e fechou a ligacao
+[  41.566 s] FIM BURST  B terminou o burst de CPU de 10000 ms -> DONE (mantem o nivel 1)
+[/home/aluno/workspace/trabalho1/queue.c:233] Connection closed by client (fd=5)
+[  41.580 s] SAIDA      B (pid 1215) terminou e fechou a ligacao
+
+[Signal] Caught signal 15 — stopping scheduler...
+
+===== Resumo (MLFQ) - tempos em segundos =====
+| App | PID | Chegada | 1a exec | Fim | T. resposta | T. resp. medio/burst | T. execucao | CPU | Bloqueado |
+|---|---|---|---|---|---|---|---|---|---|
+| A | 1213 | 0.175 | 0.175 | 25.634 | 0.000 | 0.000 | 25.459 | 5.000 | 0.000 |
+| B | 1215 | 0.280 | 0.851 | 41.566 | 0.571 | 0.571 | 41.286 | 10.000 | 0.000 |
+| C | 1217 | 0.280 | 1.379 | 21.347 | 1.099 | 1.099 | 21.067 | 4.000 | 0.000 |
+| D | 1219 | 0.493 | 1.909 | 14.839 | 1.416 | 1.416 | 14.346 | 2.000 | 0.000 |
+| E | 1221 | 0.590 | 2.433 | 18.530 | 1.843 | 1.843 | 17.940 | 3.000 | 0.000 |
+| F | 1223 | 0.698 | 2.955 | 41.511 | 2.257 | 2.257 | 40.813 | 15.000 | 0.000 |
+| **Media** | | | | | 1.198 | 1.198 | 26.819 | | |
+T. resposta = 1a exec - chegada; T. resp. medio/burst = media de (despacho - pedido RUN) por burst; T. execucao = fim - chegada (= Elapsed da application).
+[Scheduler] Cleaning up and shutting down...
+[Scheduler] Shutdown complete.

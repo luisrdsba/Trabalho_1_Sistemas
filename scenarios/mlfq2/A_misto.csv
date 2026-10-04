@@ -1,0 +1,19 @@
+# 3c-ii (MLFQ) - A: batch -> interativo -> batch.
+# Fase 1 (batch): 5 s de CPU seguidos -> desce ate ao nivel 2.
+5000,0,0
+# Fase 2 (interativo): 12 x (100 ms CPU + 400 ms E/S), ~6 s > periodo de boost (5 s).
+# Fica no nivel 2 (bursts curtos nao sobem de nivel) ate ao proximo boost; depois fica no nivel 0.
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+100,400,0
+# Fase 3 (batch): 5 s de CPU seguidos -> volta a descer ate ao nivel 2.
+5000,0,0

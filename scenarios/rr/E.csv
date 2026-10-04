@@ -1,0 +1,2 @@
+# 3b (RR) - E: CPU-bound 4.5 s. Em RR comeca a correr ao fim de ~2 s; em FIFO/SJF so ao fim de ~13-18 s.
+4500,0,0

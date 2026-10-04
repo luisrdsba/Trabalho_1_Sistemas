@@ -1,0 +1,3 @@
+# Os scripts correm em Linux: têm de ficar sempre com finais de linha LF,
+# mesmo que o repositório seja clonado/editado em Windows.
+*.sh text eol=lf
